@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-nav {
+header {
   display: flex;
   width: 375px;
   height: 48px;
@@ -15,10 +15,9 @@ nav {
   flex-shrink: 0;
 }
 
-svg {
+#menu-btn>img {
   width: 24px;
   height: 24px;
-  color: var(--primary-b-400, #6070ff);
 }
 
 #logo {
@@ -62,7 +61,7 @@ svg {
   line-height: 52px;
 }
 
-#primary-text + p {
+#primary-text+p {
   display: flex;
   width: 327px;
   height: 146px;
@@ -74,7 +73,7 @@ svg {
   line-height: 24px;
 }
 
-#primary-text + p + p {
+#primary-text+p+p {
   color: var(--primary-b-300, #7f8cff);
 
   /* Body / 2 - Bolder */
@@ -84,7 +83,14 @@ svg {
   line-height: 24px;
 }
 
-.social {
+.socials {
+  list-style: none;
   width: 170.167px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials img {
   height: 20px;
+  width: auto;
 }

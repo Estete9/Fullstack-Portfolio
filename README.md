@@ -35,8 +35,6 @@
 
 # 📖 [Fullstack Personal Portfolio] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
 **[Fullstack personal portfolio]** is a starting project to test linters and core files like gitignore with GitHub, HTML, CSS, and Javascript
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -174,6 +172,6 @@ I would like to thank Microverse for the support.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
