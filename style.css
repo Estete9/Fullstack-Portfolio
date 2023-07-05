@@ -29,7 +29,6 @@ svg {
   color: var(--primary-b-400, #6070ff);
   text-align: center;
   font-size: 18px;
-  font-family: Poppins;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
@@ -56,21 +55,18 @@ svg {
   height: 150px;
   flex-direction: column;
   justify-content: center;
-
-  color: var(--neutrals-n-800, #172B4D);
+  color: var(--neutrals-n-800, #172b4d);
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: 52px;
-
 }
 
-#primary-text+p {
+#primary-text + p {
   display: flex;
   width: 327px;
   height: 146px;
   flex-direction: column;
-
   color: var(--neutrals-n-600, #344563);
   font-size: 16px;
   font-style: normal;
@@ -78,12 +74,11 @@ svg {
   line-height: 24px;
 }
 
-#primary-text+p+p {
-  color: var(--primary-b-300, #7F8CFF);
+#primary-text + p + p {
+  color: var(--primary-b-300, #7f8cff);
 
   /* Body / 2 - Bolder */
   font-size: 16px;
-  font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
