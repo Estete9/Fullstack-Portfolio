@@ -15,7 +15,7 @@ header {
   flex-shrink: 0;
 }
 
-#menu-btn>img {
+#menu-btn > img {
   width: 24px;
   height: 24px;
 }
@@ -61,7 +61,7 @@ header {
   line-height: 52px;
 }
 
-#primary-text+p {
+#primary-text + p {
   display: flex;
   width: 327px;
   height: 146px;
@@ -73,7 +73,7 @@ header {
   line-height: 24px;
 }
 
-#primary-text+p+p {
+#primary-text + p + p {
   color: var(--primary-b-300, #7f8cff);
 
   /* Body / 2 - Bolder */
