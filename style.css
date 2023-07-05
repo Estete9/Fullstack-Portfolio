@@ -15,6 +15,11 @@ header {
   flex-shrink: 0;
 }
 
+.socials img {
+  height: 20px;
+  width: auto;
+}
+
 #menu-btn > img {
   width: 24px;
   height: 24px;
@@ -90,7 +95,4 @@ header {
   justify-content: space-between;
 }
 
-.socials img {
-  height: 20px;
-  width: auto;
-}
+
