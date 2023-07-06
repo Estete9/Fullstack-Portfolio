@@ -233,7 +233,7 @@ li div p {
   align-items: flex-start;
 }
 
-.skill>div {
+.skill > div {
   display: flex;
   justify-content: flex-start;
 }
