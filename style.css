@@ -233,7 +233,11 @@ li div p {
   align-items: flex-start;
 }
 
+<<<<<<< HEAD
 .skill>div {
+=======
+.skill > div {
+>>>>>>> ed27bb3f13b4f68e48837316d5b6644f3b253f9c
   display: flex;
   justify-content: flex-start;
 }
@@ -260,6 +264,10 @@ li div p {
   width: 327px;
   height: 1px;
   flex-shrink: 0;
+<<<<<<< HEAD
   border: 0px solid transparent;
+=======
+  border: 0px;
+>>>>>>> ed27bb3f13b4f68e48837316d5b6644f3b253f9c
   background: #dfe1e6;
 }
