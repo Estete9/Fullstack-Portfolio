@@ -179,18 +179,25 @@ header {
   background: var(--primary-b-50, #ebebff);
 }
 
+<<<<<<< HEAD
 .action {
   display: flex;
   padding: 12px 0;
   align-items: center;
 }
 
+=======
+>>>>>>> dacbb20e8a774804a1bc8ca6c8babac648d6117b
 .cta-btn {
   display: flex;
   background-color: transparent;
   padding: 12px;
   border-radius: 8px;
   align-items: center;
+<<<<<<< HEAD
+=======
+  width: fit-content;
+>>>>>>> dacbb20e8a774804a1bc8ca6c8babac648d6117b
   border: 1px solid var(--primary-b-400, #6070ff);
   color: var(--primary-b-500, #396df2);
   text-align: center;
