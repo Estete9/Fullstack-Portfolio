@@ -260,6 +260,6 @@ li div p {
   width: 327px;
   height: 1px;
   flex-shrink: 0;
-  border: 0px solid transparent;
+  border: 0px solid white;
   background: #dfe1e6;
 }
