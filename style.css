@@ -30,7 +30,7 @@ header {
   height: 8px;
 }
 
-#menu-btn>img {
+#menu-btn > img {
   width: 24px;
   height: 24px;
 }
@@ -88,7 +88,7 @@ li div p {
   line-height: 24px;
 }
 
-.primary-text+p {
+.primary-text + p {
   display: flex;
   width: 327px;
   height: 146px;
@@ -100,7 +100,7 @@ li div p {
   line-height: 24px;
 }
 
-.primary-text+p+p {
+.primary-text + p + p {
   color: var(--primary-b-300, #7f8cff);
   font-size: 16px;
   font-style: normal;
@@ -233,7 +233,7 @@ li div p {
   align-items: flex-start;
 }
 
-.skill>div {
+.skill > div {
   display: flex;
   justify-content: flex-start;
 }
@@ -260,6 +260,5 @@ li div p {
   width: 327px;
   height: 1px;
   flex-shrink: 0;
-  border: 0px solid white;
-  background: #dfe1e6;
+  border: 1px solid #dfe1e6;
 }
