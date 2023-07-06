@@ -262,3 +262,8 @@ li div p {
   flex-shrink: 0;
   border: 1px solid #dfe1e6;
 }
+#languages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
