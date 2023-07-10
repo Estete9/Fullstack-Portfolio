@@ -180,7 +180,7 @@ li div p {
 
 .tags {
   list-style: none;
-  display: flex;
+  /* display: flex; */
   gap: 8px;
   align-items: center;
 }
@@ -191,6 +191,7 @@ li div p {
   padding: 4px 12px;
   border-radius: 8px;
   background: var(--primary-b-50, #ebebff);
+  float: left;
 }
 
 .action {
