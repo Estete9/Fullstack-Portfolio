@@ -192,6 +192,7 @@ li div p {
   border-radius: 8px;
   background: var(--primary-b-50, #ebebff);
   float: left;
+  margin-right: 10px;
 }
 
 .action {
