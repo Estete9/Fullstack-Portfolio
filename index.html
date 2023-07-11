@@ -60,7 +60,6 @@
       <section id="works-container">
         <div class="card work">
           <img
-            class="card-img"
             src="assets/works/Snapshoot Portfolio.png"
             alt="project screenshot"
           />
@@ -85,7 +84,6 @@
         </div>
         <div class="card work">
           <img
-            class="card-img"
             src="assets/works/Snapshoot Portfolio (3).png"
             alt="project screenshot"
           />
@@ -110,7 +108,6 @@
         </div>
         <div class="card work">
           <img
-            class="card-img"
             src="assets/works/Snapshoot Portfolio (1).png"
             alt="project screenshot"
           />
@@ -135,7 +132,6 @@
         </div>
         <div class="card work">
           <img
-            class="card-img"
             src="assets/works/Snapshoot Portfolio (2).png"
             alt="project screenshot"
           />
@@ -254,33 +250,45 @@
           <hr class="dividers" />
         </ul>
       </section>
-      <section id="contact-form-container">
-        <div>
-          <h1>Contact me</h1>
-          <p>
-            If you have an application you are interested in developing, a
-            feature that you need built or a project that needs coding. I’d love
-            to help with it!
-          </p>
+      <section id="contact-form-bkg">
+        <div id="contact-form-container">
+          <div>
+            <h1 id="contact-form-title">Contact me</h1>
+            <p>
+              If you have an application you are interested in developing, a
+              feature that you need built or a project that needs coding. I’d
+              love to help with it!
+            </p>
+          </div>
+          <form
+            action="https://formspree.io/f/xzblbkpe"
+            method="post"
+            id="contact-form"
+          >
+            <input
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="John Doe"
+              required
+            />
+            <input
+              type="email"
+              name="user-email"
+              id="user-email"
+              placeholder="johndoe@example.com"
+              required
+            />
+            <textarea
+              name="user-message"
+              id="user-message"
+              cols="30"
+              rows="10"
+              placeholder="Write your message here..."
+            ></textarea>
+            <button type="submit">Get in touch</button>
+          </form>
         </div>
-        <form action="https://formspree.io/f/xzblbkpe" method="post">
-          <input
-            type="text"
-            name="user-name"
-            id="user-name"
-            placeholder="John Doe"
-            required
-          />
-          <input
-            type="email"
-            name="user-email"
-            id="user-email"
-            placeholder="johndoe@example.com"
-            required
-          />
-          <textarea name="user-message" id="user-message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
-          <button type="submit">Get in touch</button>
-        </form>
       </section>
     </main>
     <footer></footer>
