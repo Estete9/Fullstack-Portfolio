@@ -161,7 +161,7 @@
           </div>
         </div>
       </section>
-      <section class="about-container">
+      <section id="about-container">
         <div id="about">
           <h1 class="primary-text">About Myself</h1>
           <p>
@@ -253,6 +253,49 @@
           </li>
           <hr class="dividers" />
         </ul>
+      </section>
+      <section id="contact-form-bkg">
+        <div id="contact-form-container">
+          <div>
+            <h1 id="contact-form-title">Contact me</h1>
+            <p>
+              If you have an application you are interested in developing, a
+              feature that you need built or a project that needs coding. I’d
+              love to help with it!
+            </p>
+          </div>
+          <form
+            action="https://formspree.io/f/xzblbkpe"
+            method="post"
+            id="contact-form"
+          >
+            <input
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="Your name here"
+              required
+              maxlength="30"
+            />
+            <input
+              type="email"
+              name="user-email"
+              id="user-email"
+              placeholder="your-email@example.com"
+              required
+            />
+            <textarea
+              name="user-message"
+              id="user-message"
+              cols="30"
+              rows="10"
+              placeholder="Write your message here..."
+              maxlength="500"
+              required
+            ></textarea>
+            <button type="submit">Get in touch</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer></footer>
