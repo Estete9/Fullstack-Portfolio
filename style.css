@@ -216,7 +216,7 @@ li div p {
   letter-spacing: 0.51px;
 }
 
-.about-container {
+#about-container {
   display: flex;
   padding: 114px 24px;
   flex-direction: column;
