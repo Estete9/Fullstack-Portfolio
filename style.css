@@ -36,6 +36,10 @@ header {
   height: 24px;
 }
 
+#menu {
+  display: none;
+}
+
 #logo {
   text-decoration: none;
   display: flex;
@@ -113,9 +117,9 @@ li div p {
   line-height: 24px;
 }
 .socials {
-  width: 170.167px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 14px;
 }
 
 #works-container {
@@ -373,6 +377,7 @@ li div p {
 @media screen and (min-width: 768px) {
   #headline {
     background-image: url(assets/headline/Desktop/Header\ bg@2x.png);
+    background-size: auto 100%;
     align-items: center;
     justify-content: center;
   }
@@ -380,13 +385,13 @@ li div p {
   #headline .primary-text {
     color: var(--theme-1-neutrals-1, #091e42);
     font-size: 48px;
+    width: calc(100% - 36%);
     font-style: normal;
     font-weight: 700;
     line-height: 60px;
     letter-spacing: 0.37px;
     margin-left: 18%;
     margin-right: 18%;
-    
   }
 
   #headline .primary-text + p {
@@ -397,5 +402,39 @@ li div p {
     line-height: 28px;
     margin-left: 18%;
     margin-right: 18%;
+  }
+
+  #headline .primary-text + p + p {
+    color: var(--primary-b-300, #7f8cff);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 18%;
+    margin-right: auto;
+  }
+
+  .socials {
+    margin-left: 18%;
+    margin-right: auto;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  #menu {
+    display: flex;
+    gap: 8px;
+  }
+
+  .menu-item {
+    padding: 10px 12px;
+    color: var(--neutrals-n-600, #344563);
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
   }
 }
