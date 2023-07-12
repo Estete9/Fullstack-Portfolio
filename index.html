@@ -269,14 +269,15 @@
               type="text"
               name="user-name"
               id="user-name"
-              placeholder="John Doe"
+              placeholder="Your name here"
               required
+              maxlength="30"
             />
             <input
               type="email"
               name="user-email"
               id="user-email"
-              placeholder="johndoe@example.com"
+              placeholder="your-email@example.com"
               required
             />
             <textarea
@@ -285,6 +286,8 @@
               cols="30"
               rows="10"
               placeholder="Write your message here..."
+              maxlength="500"
+              required
             ></textarea>
             <button type="submit">Get in touch</button>
           </form>
