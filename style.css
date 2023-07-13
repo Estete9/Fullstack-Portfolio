@@ -512,4 +512,52 @@ li div p {
   .tags {
     margin: 40px 0;
   }
+
+  #about-container {
+    flex-direction: row;
+    padding: 166px 143px;
+  }
+
+  #about .primary-text {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+
+  #about p:first-of-type {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  #about > p + p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  #about {
+    max-width: 30%;
+  }
+
+  #about .socials {
+    margin-left: 0;
+  }
+
+  #languages-list {
+    flex-direction: row;
+  }
+
+  .language {
+    flex: 1;
+  }
+
+  .language div {
+    flex-direction: column;
+    text-align: center;
+  }
+  .skill div:first-of-type {
+    padding: 12px 12px 20px 12px;
+  }
 }
