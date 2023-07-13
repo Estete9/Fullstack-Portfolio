@@ -58,6 +58,17 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
+  animation-name: spin;
+  animation-duration: 1s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #menu-btn {
@@ -95,6 +106,7 @@ header {
   animation-name: slidein;
   animation-duration: 2s;
   overflow: hidden;
+  min-width: 327px;
 }
 
 @keyframes slidein {
@@ -419,20 +431,7 @@ li div p {
   border-radius: 8px;
 }
 
-#logo {
-  animation-name: spin;
-  animation-duration: 1s;
-}
-
-@keyframes spin{
-  from{
-    transform: rotate(0);
-  }
-  to{
-    transform: rotate(360deg);
-  }
-}
-
+/*-----------------------------------------------------Start  of desktop styling ------------------------------------------------------------------------------------ */
 @media screen and (min-width: 768px) {
   header {
     height: 72px;
@@ -468,10 +467,12 @@ li div p {
   @keyframes slidein {
     from {
       margin-left: 200%;
+      color: transparent;
     }
 
     to {
       margin-left: 18%;
+      color: var(--theme-1-neutrals-1, #091e42);
     }
   }
   .language-container p {
