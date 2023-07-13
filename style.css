@@ -189,6 +189,7 @@ li div p {
   gap: 8px;
   align-items: center;
   margin: 12px 0;
+  flex-wrap: wrap;
 }
 
 .tag {
@@ -547,10 +548,11 @@ li div p {
 
   #languages-list {
     flex-direction: row;
+    padding: 12px;
   }
 
   .language {
-    flex: 1;
+    min-width: 16%;
   }
 
   .language div {
@@ -559,5 +561,31 @@ li div p {
   }
   .skill div:first-of-type {
     padding: 12px 12px 20px 12px;
+  }
+
+  .language-container img:first-child {
+    align-self: self-start;
+  }
+
+  .language-container p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  #skills-list li div {
+    padding: 16px 26px 16px 24px;
+  }
+
+  #contact-form-container {
+    align-items: center;
+  }
+
+  #contact-form-container > * {
+    width: 40%;
+  }
+
+  #contact-form button {
+    margin-left: auto;
   }
 }
