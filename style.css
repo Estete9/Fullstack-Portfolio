@@ -12,10 +12,11 @@ body {
 
 header {
   display: flex;
-  width: 375px;
+  width: 100%;
   height: 48px;
   padding: 4px 24px 4px 12px;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 199px;
   flex-shrink: 0;
 }
@@ -35,9 +36,13 @@ header {
   height: 24px;
 }
 
+#menu {
+  display: none;
+}
+
 #logo {
+  display: block;
   text-decoration: none;
-  display: flex;
   padding: 10px 12px;
   align-items: center;
   color: var(--primary-b-400, #6070ff);
@@ -55,18 +60,20 @@ header {
 }
 
 #headline {
-  display: inline-flex;
+  display: flex;
   padding: 114px 24px;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-  background-image: url(assets/headline/header-shapes\ mobile.png);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url(assets/headline/header-shapes\ mobile@2x.svg);
+  background-size: 100%;
 }
 
 .primary-text {
   display: flex;
-  width: 327px;
-  height: 150px;
   flex-direction: column;
   justify-content: center;
   color: var(--neutrals-n-800, #172b4d);
@@ -76,9 +83,10 @@ header {
   line-height: 52px;
 }
 
+/* style for Tech stack text in about me section */
 li div p {
   display: flex;
-  width: 237px;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   color: #000;
@@ -90,8 +98,6 @@ li div p {
 
 .primary-text + p {
   display: flex;
-  width: 327px;
-  height: 146px;
   flex-direction: column;
   color: var(--neutrals-n-600, #344563);
   font-size: 16px;
@@ -109,9 +115,9 @@ li div p {
 }
 
 .socials {
-  width: 170.167px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 14px;
 }
 
 #works-container {
@@ -183,6 +189,8 @@ li div p {
   display: flex;
   gap: 8px;
   align-items: center;
+  margin: 12px 0;
+  flex-wrap: wrap;
 }
 
 .tag {
@@ -234,6 +242,10 @@ li div p {
   align-items: flex-start;
 }
 
+#skills-list {
+  width: 100%;
+}
+
 .skill > div {
   display: flex;
   justify-content: flex-start;
@@ -241,7 +253,7 @@ li div p {
 
 .language-container {
   display: flex;
-  width: 303px;
+  width: 100%;
   padding: 9px 12px 9.716px 12px;
   justify-content: center;
   align-items: center;
@@ -258,7 +270,7 @@ li div p {
 }
 
 .dividers {
-  width: 327px;
+  width: 100%;
   height: 1px;
   flex-shrink: 0;
   border: 1px solid #dfe1e6;
@@ -276,7 +288,7 @@ li div p {
 
 #contact-form-container {
   width: 100%;
-  height: 779px;
+  height: auto;
   flex-shrink: 0;
   border-top-left-radius: 100px;
   display: flex;
@@ -286,6 +298,7 @@ li div p {
   background-image: url(assets/contact/contact\ form\ shapes-mobile.svg);
   background-position: right;
   background-repeat: no-repeat;
+  padding-bottom: 45px;
 }
 
 #contact-form-title,
@@ -304,7 +317,7 @@ li div p {
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
-  margin-top: 103px;
+  margin-top: 170px;
 }
 
 #contact-form-title + p {
@@ -359,4 +372,222 @@ li div p {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.51px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 72px;
+    width: 100%;
+    padding: 16px 143px;
+  }
+
+  #headline {
+    background-image: url(assets/headline/Desktop/Header\ bg@2x.png);
+    background-size: auto 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #headline .primary-text {
+    color: var(--theme-1-neutrals-1, #091e42);
+    font-size: 48px;
+    width: calc(100% - 36%);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.37px;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+
+  .language-container p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  #about > p + p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  #headline .primary-text + p {
+    color: var(--theme-1-neutrals-3, #344563);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+
+  #about p:first-of-type {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  #headline .primary-text + p + p {
+    color: var(--primary-b-300, #7f8cff);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 18%;
+    margin-right: auto;
+  }
+
+  .socials {
+    margin-left: 18%;
+    margin-right: auto;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  #menu {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .menu-item {
+    padding: 10px 12px;
+    color: var(--neutrals-n-600, #344563);
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  #works-container {
+    padding: 142px 9%;
+  }
+
+  .card {
+    flex-direction: row;
+    width: 100%;
+    padding: 24px;
+    align-items: center;
+  }
+
+  .card-content {
+    padding: 0 24px;
+  }
+
+  .card-img {
+    margin-right: 22px;
+    padding: 0 24px;
+    flex: 1;
+  }
+
+  .card:nth-child(even) .card-img {
+    order: 1;
+    margin-right: 0;
+    margin-left: 22px;
+  }
+
+  .card-title {
+    font-size: 40px;
+    line-height: 52px;
+    margin-top: 24px;
+  }
+
+  .details-container {
+    margin-bottom: 24px;
+  }
+
+  .client {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .role {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .year {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .work-description {
+    max-width: 496px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .cta-btn {
+    margin-bottom: 30%;
+  }
+
+  .tags {
+    margin: 40px 0;
+  }
+
+  #about-container {
+    flex-direction: row;
+    padding: 166px 143px;
+  }
+
+  #about .primary-text {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+
+  #about {
+    max-width: 30%;
+  }
+
+  #about .socials {
+    margin-left: 0;
+  }
+
+  #languages-list {
+    flex-direction: row;
+    padding: 12px;
+  }
+
+  .language {
+    min-width: 16%;
+  }
+
+  .language div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skill div:first-of-type {
+    padding: 12px 12px 20px 12px;
+  }
+
+  .language-container img:first-child {
+    align-self: self-start;
+  }
+
+  #skills-list li div {
+    padding: 16px 26px 16px 24px;
+  }
+
+  #contact-form-container {
+    align-items: center;
+  }
+
+  #contact-form-container > * {
+    width: 40%;
+  }
+
+  #contact-form button {
+    margin-left: auto;
+  }
 }
