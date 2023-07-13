@@ -97,6 +97,16 @@ header {
   overflow: hidden;
 }
 
+@keyframes slidein {
+  from {
+    margin-left: 300%;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
 /* style for Tech stack text in about me section */
 li div p {
   display: flex;
@@ -437,13 +447,18 @@ li div p {
     letter-spacing: 0.37px;
     margin-left: 18%;
     margin-right: 18%;
-  }
-
-  #headline .primary-text {
     animation-name: slidein;
     animation-duration: 2s;
   }
 
+  @keyframes slidein {
+    from {
+      margin-left: 200%;
+    }
+
+    to {
+      margin-left: 18%;
+    }
   }
   .language-container p {
     font-size: 15px;
