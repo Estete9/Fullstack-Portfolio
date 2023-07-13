@@ -223,6 +223,12 @@ li div p {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.51px;
+  transition: all 0.5s;
+}
+
+.cta-btn:hover {
+  background-color: #6070ff;
+  color: #fff;
 }
 
 #about-container {
@@ -362,6 +368,7 @@ li div p {
   padding: 12px 16px;
   align-items: center;
   border-radius: 8px;
+  /* border: 1px solid var(--primary-b-400, fff); */
   background: var(--neutrals-n-0, #fff);
   color: var(--primary-b-400, #6070ff);
   text-align: center;
@@ -372,6 +379,14 @@ li div p {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.51px;
+  transition: all 0.5s;
+}
+
+#contact-form button:hover {
+  color: var(--neutrals-n-0, #fff);
+  background-color: var(--primary-b-400, #6070ff);
+  border: 1px solid var(--primary-b-400, #fff);
+  border-radius: 8px;
 }
 
 @media screen and (min-width: 768px) {
