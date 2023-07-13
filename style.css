@@ -22,8 +22,16 @@ header {
 }
 
 .socials img {
-  height: 20px;
+  height: 30px;
   width: auto;
+  transition: all 0.5s;
+  padding: 5px;
+}
+
+.socials img:hover {
+  height: 25px;
+  width: auto;
+  padding: 0;
 }
 
 .details-container img {
