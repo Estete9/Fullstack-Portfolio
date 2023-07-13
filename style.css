@@ -419,6 +419,20 @@ li div p {
   border-radius: 8px;
 }
 
+#logo {
+  animation-name: spin;
+  animation-duration: 1s;
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   header {
     height: 72px;
