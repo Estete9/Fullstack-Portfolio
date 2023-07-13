@@ -443,6 +443,10 @@ li div p {
     line-height: 20px;
   }
 
+  #works-container {
+    padding: 142px 9%;
+  }
+
   .card {
     flex-direction: row;
     width: 100%;
@@ -451,14 +455,13 @@ li div p {
   }
 
   .card-content {
-    width: calc(50vw - 48px - 44px);
     padding: 0 24px;
   }
 
   .card-img {
     margin-right: 22px;
     padding: 0 24px;
-    width: calc(50vw - 48px);
+    flex: 1;
   }
 
   .card:nth-child(even) .card-img {
