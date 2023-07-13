@@ -24,7 +24,7 @@ header {
 .socials img {
   height: 30px;
   width: auto;
-  transition: all 0.5s;
+  transition: all 0.3s;
   padding: 5px;
 }
 
@@ -259,7 +259,7 @@ li div p {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.51px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .cta-btn:hover {
@@ -421,7 +421,7 @@ li div p {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.51px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 #contact-form button:hover {
@@ -538,7 +538,7 @@ li div p {
     line-height: 20px;
     color: var(--neutrals-n-600, #344563);
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all 0.1s;
   }
 
   .menu-item a:hover {
@@ -555,7 +555,7 @@ li div p {
     width: 100%;
     padding: 24px;
     align-items: center;
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
   .card-content {
