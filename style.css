@@ -400,17 +400,17 @@ li div p {
     margin-right: 18%;
   }
 
+  .language-container p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
   #about > p + p {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
-  }
-
-  .language-container p {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 20px;
   }
 
   #headline .primary-text + p {
