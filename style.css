@@ -443,6 +443,10 @@ li div p {
     line-height: 20px;
   }
 
+  #works-container {
+    padding: 142px 9%;
+  }
+
   .card {
     flex-direction: row;
     width: 100%;
