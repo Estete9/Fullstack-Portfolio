@@ -29,9 +29,8 @@ header {
 }
 
 .socials img:hover {
-  height: 25px;
-  width: auto;
   padding: 0;
+  transform: scale(1.2);
 }
 
 .details-container img {
@@ -81,6 +80,7 @@ header {
 }
 
 .primary-text {
+  min-width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,6 +89,12 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: 52px;
+}
+
+#headline .primary-text {
+  animation-name: slidein;
+  animation-duration: 2s;
+  overflow: hidden;
 }
 
 /* style for Tech stack text in about me section */
@@ -360,6 +366,12 @@ li div p {
   border: 1px solid #cfd8dc;
   background: #fff;
   padding: 15px 16px;
+  transition: all 0.5s;
+}
+
+#contact-form input:hover,
+#contact-form textarea:hover {
+  padding: 15px 16px 15px 20px;
 }
 
 #contact-form input {
@@ -427,6 +439,12 @@ li div p {
     margin-right: 18%;
   }
 
+  #headline .primary-text {
+    animation-name: slidein;
+    animation-duration: 2s;
+  }
+
+  }
   .language-container p {
     font-size: 15px;
     font-weight: 500;
@@ -495,7 +513,6 @@ li div p {
 
   .menu-item a:hover {
     color: #6070ff;
-    /* font-size: 17px; */
     padding: 8px 10px;
   }
 
@@ -508,6 +525,7 @@ li div p {
     width: 100%;
     padding: 24px;
     align-items: center;
+    transition: all 0.5s;
   }
 
   .card-content {
@@ -518,6 +536,10 @@ li div p {
     margin-right: 22px;
     padding: 0 24px;
     flex: 1;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 
   .card:nth-child(even) .card-img {
@@ -572,6 +594,7 @@ li div p {
   #about-container {
     flex-direction: row;
     padding: 166px 143px;
+    gap: 60px;
   }
 
   #about .primary-text {
