@@ -404,6 +404,10 @@ li div p {
     padding: 16px 143px;
   }
 
+  #logo {
+    min-width: fit-content;
+  }
+
   #headline {
     background-image: url(assets/headline/Desktop/Header\ bg@2x.png);
     background-size: auto 100%;
@@ -477,14 +481,22 @@ li div p {
     align-items: center;
   }
 
-  .menu-item {
+  .menu-item a {
     padding: 10px 12px;
-    color: var(--neutrals-n-600, #344563);
     text-align: center;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
+    color: var(--neutrals-n-600, #344563);
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+
+  .menu-item a:hover {
+    color: #6070ff;
+    /* font-size: 17px; */
+    padding: 8px 10px;
   }
 
   #works-container {
