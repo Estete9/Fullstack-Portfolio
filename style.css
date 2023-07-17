@@ -22,13 +22,20 @@ header {
 }
 
 .socials img {
-  height: 20px;
+  height: 30px;
   width: auto;
+  transition: all 0.3s;
+  padding: 5px;
 }
 
 .details-container img {
   width: 8px;
   height: 8px;
+}
+
+.socials img:hover {
+  padding: 0;
+  transform: scale(1.2);
 }
 
 #menu-btn > img {
@@ -51,6 +58,18 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
+  animation-name: spin;
+  animation-duration: 1s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #menu-btn {
@@ -73,6 +92,7 @@ header {
 }
 
 .primary-text {
+  min-width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,6 +101,23 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: 52px;
+}
+
+#headline .primary-text {
+  animation-name: slidein;
+  animation-duration: 2s;
+  overflow: hidden;
+  min-width: 327px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 300%;
+  }
+
+  to {
+    margin-left: 0;
+  }
 }
 
 /* style for Tech stack text in about me section */
@@ -223,6 +260,12 @@ li div p {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.51px;
+  transition: all 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #6070ff;
+  color: #fff;
 }
 
 #about-container {
@@ -346,6 +389,7 @@ li div p {
   border: 1px solid #cfd8dc;
   background: #fff;
   padding: 15px 16px;
+  transition: all 0.5s;
 }
 
 #contact-form input {
@@ -354,6 +398,11 @@ li div p {
 
 #contact-form textarea {
   height: 170px;
+}
+
+#contact-form input:hover,
+#contact-form textarea:hover {
+  padding: 15px 16px 15px 20px;
 }
 
 #contact-form button {
@@ -372,13 +421,26 @@ li div p {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.51px;
+  transition: all 0.3s;
 }
 
+#contact-form button:hover {
+  color: var(--neutrals-n-0, #fff);
+  background-color: var(--primary-b-400, #6070ff);
+  border: 1px solid var(--primary-b-400, #fff);
+  border-radius: 8px;
+}
+
+/* -----------------------------------------------------Start  of desktop styling ------------------------------------------------------------------------------------ */
 @media screen and (min-width: 768px) {
   header {
     height: 72px;
     width: 100%;
     padding: 16px 143px;
+  }
+
+  #logo {
+    min-width: fit-content;
   }
 
   #headline {
@@ -398,6 +460,20 @@ li div p {
     letter-spacing: 0.37px;
     margin-left: 18%;
     margin-right: 18%;
+    animation-name: slidein;
+    animation-duration: 2s;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 200%;
+      color: transparent;
+    }
+
+    to {
+      margin-left: 18%;
+      color: var(--theme-1-neutrals-1, #091e42);
+    }
   }
 
   .language-container p {
@@ -454,14 +530,21 @@ li div p {
     align-items: center;
   }
 
-  .menu-item {
+  .menu-item a {
     padding: 10px 12px;
-    color: var(--neutrals-n-600, #344563);
     text-align: center;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
+    color: var(--neutrals-n-600, #344563);
+    text-decoration: none;
+    transition: all 0.1s;
+  }
+
+  .menu-item a:hover {
+    color: #6070ff;
+    padding: 8px 10px;
   }
 
   #works-container {
@@ -473,6 +556,7 @@ li div p {
     width: 100%;
     padding: 24px;
     align-items: center;
+    transition: all 0.3s;
   }
 
   .card-content {
@@ -483,6 +567,10 @@ li div p {
     margin-right: 22px;
     padding: 0 24px;
     flex: 1;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 
   .card:nth-child(even) .card-img {
@@ -537,6 +625,7 @@ li div p {
   #about-container {
     flex-direction: row;
     padding: 166px 143px;
+    gap: 60px;
   }
 
   #about .primary-text {
