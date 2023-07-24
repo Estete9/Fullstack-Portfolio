@@ -190,10 +190,6 @@ li div p {
 
 #works-container {
   display: grid;
-<<<<<<< HEAD
-=======
-  /* grid-template-columns: 1; */
->>>>>>> 13a2e2dc9d71194169dd892c436f38ebd139bf91
   padding: 114px 24px;
   align-items: center;
   gap: 88px;
