@@ -124,7 +124,6 @@ header {
 }
 
 .primary-text {
-  min-width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,7 +138,7 @@ header {
   animation-name: slidein;
   animation-duration: 2s;
   overflow: hidden;
-  min-width: 327px;
+  min-width: 400px;
 }
 
 @keyframes slidein {
@@ -191,7 +190,7 @@ li div p {
 
 #works-container {
   display: grid;
-  grid-template-columns: 1;
+  /* grid-template-columns: 1; */
   padding: 114px 24px;
   align-items: center;
   gap: 88px;
@@ -469,10 +468,6 @@ li div p {
     height: 72px;
     width: 100%;
     padding: 16px 143px;
-  }
-
-  #logo {
-    min-width: fit-content;
   }
 
   #headline {
