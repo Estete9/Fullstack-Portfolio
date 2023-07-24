@@ -51,7 +51,9 @@ header {
   font-weight: 600;
   line-height: 44px;
   gap: 32px;
+  backdrop-filter: blur(20px);
 }
+
 .mobile-menu a {
   text-decoration: none;
   color: #fff;
@@ -556,6 +558,7 @@ li div p {
 
   #menu-btn {
     display: none;
+    cursor: pointer;
   }
 
   #menu {
