@@ -556,6 +556,7 @@ li div p {
 
   #menu-btn {
     display: none;
+    cursor: pointer;
   }
 
   #menu {
