@@ -1,8 +1,7 @@
-let menuBtn = document.querySelector("#menu-btn img");
-let menu = document.querySelector("#menu");
+const menuBtn = document.querySelector("#menu-btn img");
+const menu = document.querySelector("#menu");
 let showMenu = false;
-let menuElems = document.querySelectorAll("#menu a");
-let main = document.querySelector("main");
+const menuElems = document.querySelectorAll("#menu a");
 
 menuBtn.style.zIndex = "3";
 
