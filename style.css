@@ -199,6 +199,32 @@ li div p {
   gap: 88px;
 }
 
+.popup {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  position: fixed;
+  z-index: 4;
+
+
+}
+
+#popup-title {
+  color:#172B4D;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 21px;
+  padding: 4px 9px;
+}
+
 .card {
   display: flex;
   flex-direction: column;

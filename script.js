@@ -1,3 +1,6 @@
+const body = document.querySelector("body");
+
+// MOBILE MENU LOGIC
 const menuBtn = document.querySelector("#menu-btn img");
 const menu = document.querySelector("#menu");
 const menuElems = document.querySelectorAll("#menu a");
@@ -48,7 +51,7 @@ for (const project of projects) {
         <li class="tag">${project.techs[1]}</li>
         <li class="tag">${project.techs[2]}</li>
       </ul>
-      <button class="cta-btn">See project</button>
+      <button id="see-project-btn" class="cta-btn">See project</button>
     </div>
   `;
 
@@ -80,3 +83,42 @@ menuElems.forEach((element) => {
     showMenu = false;
   };
 });
+
+// POPUP LOGIC
+const projectBtn = document.getElementById("see-project-btn");
+const popupWrapper = document.createElement("section");
+projectBtn.onclick = function() {
+popupWrapper.style.visibility = 'visible'
+}
+popupWrapper.className = "popup";
+let popupCard = `
+  <h1 id="popup-title">${projects[0].name}</h1>
+  <div class="details-container">
+    <p class="client">${projects[0].client}</p>
+    <img src="/Counter.png" alt="" />
+    <p class="role">${projects[0].role}</p>
+    <img src="/Counter.png" alt="" />
+    <p class="year">${projects[0].year}</p>
+  </div>
+
+  <img src="Portfolio1.png" alt="" />
+  <p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book. It has survived not only five centuries, but also
+    the leap into electronic typesetting, remaining essent
+  </p>
+  <ul class="tags">
+    <li class="tag">HTML</li>
+    <li class="tag">CSS</li>
+    <li class="tag">JavaScript</li>
+  </ul>
+  <hr class="dividers" />
+  <div class="cta-btns">
+    <button class="cta-btn">See live</button>
+    <button class="cta-btn">See source</button>
+  </div>
+`;
+popupWrapper.innerHTML = popupCard;
+body.appendChild(popupWrapper)
