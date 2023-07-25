@@ -62,7 +62,6 @@ header {
   gap: 32px;
 }
 
-
 .mobile-menu a {
   text-decoration: none;
   color: #fff;
@@ -568,9 +567,8 @@ li div p {
     position: static;
     width: auto;
     height: auto;
-    backdrop-filter: blur(0px);
+    backdrop-filter: none;
   }
-
 
   .menu-item a {
     padding: 10px 12px;
