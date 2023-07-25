@@ -1,6 +1,7 @@
 const menuBtn = document.querySelector('#menu-btn img');
 const menu = document.querySelector('#menu');
 let showMenu = false;
+const blurBgd = document.querySelector('blur-bgd')
 const menuElems = document.querySelectorAll('#menu a');
 
 menuBtn.style.zIndex = '3';
