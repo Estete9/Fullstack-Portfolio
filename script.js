@@ -134,10 +134,8 @@ function openPopUp() {
     closeBtn.className = 'open';
   }
 }
-closeBtn.onclick = closePopup
+closeBtn.onclick = closePopup;
 
 for (const btn of projectBtns) {
   btn.addEventListener('click', openPopUp);
 }
-
-
