@@ -194,48 +194,62 @@ li div p {
 
 #works-container {
   display: grid;
-  padding: 114px 24px;
+  padding: 114px 5%;
   align-items: center;
   gap: 88px;
 }
 
-.overlay > div {
+#overlay > div {
   display: flex;
 }
 
-.overlay > h1 + img {
-  height: 20px;
-  width: auto;
-  margin-left: auto;
+.details-container + img{
+width: 95%;
 }
 
-.overlay {
+#popup-header{
+  display: flex;
+}
+
+#popup-close {
+  display: none;
+  margin-left: auto;
+  position: absolute; 
+  right: 7%;
+  top: 5%; 
+}
+
+#popup-close.open {
+  display: flex;
+}
+
+#overlay {
   position: fixed;
   display: none;
+  width: calc(100% - 32px);
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
   background-color: white;
-  z-index: 4;
-  cursor: pointer;
-  flex-direction: column;
   margin: 16px;
   border-radius: 15px;
   border: 1px solid #dfe1e6;
-  padding: 10% 5%;
+  padding: 8% 5%;
 }
+
+#overlay.open {
+  display: flex;
+  flex-direction: column;
+}
+
 #popup-title {
   color: #172b4d;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 44px; /* 137.5% */
-  display: inline;
-  margin-right: 77%;
+  line-height: 44px;
 }
 
-.blur {
+#blur {
   position: fixed;
   display: none;
   top: 0;
@@ -243,10 +257,12 @@ li div p {
   right: 0;
   bottom: 0;
   background-color: #c1c7d09d;
-  z-index: 4;
-  cursor: pointer;
   flex-direction: column;
   backdrop-filter: blur(5px);
+}
+
+#blur.open {
+  display: flex;
 }
 
 .cta-btns {
@@ -713,6 +729,7 @@ li div p {
 
   .cta-btn {
     margin-bottom: 30%;
+    cursor: pointer;
   }
 
   .tags {

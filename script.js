@@ -1,13 +1,7 @@
 const body = document.querySelector("body");
 
-// MOBILE MENU LOGIC
-const menuBtn = document.querySelector("#menu-btn img");
-const menu = document.querySelector("#menu");
-const menuElems = document.querySelectorAll("#menu a");
-const workSection = document.getElementById("works-container");
-let showMenu = false;
-
 // DYNAMICALLY POPULATED PROJECTS
+const workSection = document.getElementById("works-container");
 let projects = [];
 
 for (let i = 0; i < 4; i++) {
@@ -59,7 +53,11 @@ for (const project of projects) {
   cardWrapper.innerHTML = cardWrapperHtml;
   workSection.appendChild(cardWrapper);
 }
-
+// MOBILE MENU LOGIC
+const menuBtn = document.querySelector("#menu-btn img");
+const menu = document.querySelector("#menu");
+const menuElems = document.querySelectorAll("#menu a");
+let showMenu = false;
 menuBtn.style.zIndex = "3";
 
 menuBtn.onclick = function () {
@@ -86,13 +84,15 @@ menuElems.forEach((element) => {
 });
 
 // POPUP LOGIC
-const projectBtns = document.querySelectorAll(".card-content .cta-btn");
-const overlay = document.querySelector(".overlay");
-const blur = document.querySelector('.blur')
+const projectBtsNodes = document.querySelectorAll(".card-content .cta-btn");
+const overlay = document.querySelector("#overlay");
+const blur = document.querySelector("#blur");
 
 let popupCard = `
-<h1 id="popup-title">${projects[0].name}</h1>
-<img src="./assets/header/cancel.svg" alt="close button" />
+<div id="popup-header">
+  <h1 id="popup-title">${projects[0].name}</h1>
+  <img id="popup-close" src="assets/header/cancel.svg" onclick="closePopup()" alt="">
+</div>
 <div class="details-container">
   <p class="client">${projects[0].client}</p>
   <img src="./assets/works/Counter.png" alt="" />
@@ -114,19 +114,25 @@ let popupCard = `
   <button class="cta-btn">See source</button>
 </div>
 `;
+overlay.innerHTML = popupCard;
 
-projectBtns.forEach((btn) => {
-  btn.onclick = function () {
-    overlay.style.display = "flex";
-    blur.style.display = "flex";
-    overlay.innerHTML = popupCard;
-    body.appendChild(popupWrapper);
-  };
-});
 
-const closeBtn = document.querySelector("#popup-close-btn");
+let projectBtns = Array.from(projectBtsNodes);
 
-closeBtn.onclick = function () {
-  overlay.style.display = "none";
-  blur.style.display = "none";
-};
+const closeBtn = document.querySelector("#popup-close");
+
+for (btn of projectBtns) {
+  btn.addEventListener("click", function () {
+    if (overlay.className !== "open") {
+      overlay.className = "open";
+      blur.className = "open";
+      closeBtn.className = "open";
+    }
+  });
+}
+
+function closePopup() {
+  overlay.className = "";
+  blur.className = "";
+  closeBtn.className = "";
+}
