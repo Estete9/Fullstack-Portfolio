@@ -14,6 +14,17 @@ body {
   background: var(--neutrals-n-10, #f7f7f9);
 }
 
+small {
+  margin-left: 5%;
+  display: none;
+  background-color: #f6e25e;
+  padding: 4px 15px;
+}
+
+small.show {
+  display: inline;
+}
+
 header {
   display: flex;
   width: 100%;
@@ -442,6 +453,15 @@ li div p {
 .cta-btn:hover {
   background-color: #6070ff;
   color: #fff;
+}
+
+.cta-btn::after {
+  background-color: #fff;
+  color: #6070ff;
+}
+
+#submit-footer {
+  width: 100%;
 }
 
 #about-container {
