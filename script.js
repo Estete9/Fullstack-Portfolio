@@ -18,7 +18,7 @@ for (let i = 0; i < 4; i += 1) {
   projects.push(project);
 }
 
-for (let i = 0; i < projects.length; i+= 1) {
+for (let i = 0; i < projects.length; i += 1) {
   const project = projects[i];
   const cardWrapper = document.createElement('div');
   cardWrapper.className = 'card work';
