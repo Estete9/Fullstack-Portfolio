@@ -188,11 +188,13 @@ li div p {
   margin-top: 8%;
 }
 
+
 .tags {
   list-style: none;
   display: flex;
   gap: 8px;
   align-items: center;
+  margin: 30px 0 12px 0;
   flex-wrap: wrap;
 }
 
@@ -223,7 +225,7 @@ li div p {
 
 .card-content > p {
   overflow: hidden;
-  height: 51%;
+  height: 33%;
 }
 
 .primary-text + p + p {
@@ -360,6 +362,7 @@ li div p {
 }
 
 .card {
+  height: 95vh;
   display: flex;
   flex-direction: column;
   padding: 16px;
