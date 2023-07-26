@@ -2,7 +2,7 @@
 const workSection = document.getElementById('works-container');
 const projects = [];
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i = i + 1) {
   const project = {
     name: 'Tonic',
     client: 'CANOPY',
@@ -18,7 +18,8 @@ for (let i = 0; i < 4; i++) {
   projects.push(project);
 }
 
-for (const project of projects) {
+for (let i = 0; i < projects.length; i = i + 1) {
+  const project = projects[i];
   const cardWrapper = document.createElement('div');
   cardWrapper.className = 'card work';
   const cardWrapperHtml = `
@@ -136,6 +137,7 @@ function openPopUp() {
 }
 closeBtn.onclick = closePopup;
 
-for (const btn of projectBtns) {
+for (let i = 0; i < projectBtns.length; i = i + 1) {
+  const btn = projectBtns[i];
   btn.addEventListener('click', openPopUp);
 }
