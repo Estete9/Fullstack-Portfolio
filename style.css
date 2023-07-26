@@ -43,6 +43,12 @@ header {
   top: 0;
 }
 
+#popup-content {
+  display: flex;
+  flex-direction: column;
+  padding: 4% 3%;
+}
+
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -168,6 +174,24 @@ li div p {
   line-height: 24px;
 }
 
+#interactions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+#interactions .tags {
+  margin: 0;
+}
+
+#interactions .dividers{
+  margin: 4% 0;
+}
+
+.cta-btn img {
+  margin-left: auto;
+}
+
 .primary-text + p {
   display: flex;
   flex-direction: column;
@@ -203,20 +227,20 @@ li div p {
   display: flex;
 }
 
-.details-container + img{
-width: 95%;
+.details-container + img {
+  width: 95%;
 }
 
-#popup-header{
+#popup-header {
   display: flex;
 }
 
 #popup-close {
   display: none;
   margin-left: auto;
-  position: absolute; 
+  position: absolute;
   right: 7%;
-  top: 5%; 
+  top: 5%;
 }
 
 #popup-close.open {
@@ -233,7 +257,8 @@ width: 95%;
   margin: 16px;
   border-radius: 15px;
   border: 1px solid #dfe1e6;
-  padding: 8% 5%;
+  padding: 4% 5%;
+  overflow: hidden;
 }
 
 #overlay.open {
@@ -247,6 +272,10 @@ width: 95%;
   font-style: normal;
   font-weight: 700;
   line-height: 44px;
+}
+#popup-description {
+  overflow: hidden;
+  height: 25%;
 }
 
 #blur {
@@ -268,8 +297,14 @@ width: 95%;
 .cta-btns {
   display: flex;
   gap: 12px;
-  margin-top: 21px;
   padding: 4px 9px;
+  width: 100%;
+}
+
+.cta-btns .cta-btn {
+  font-size: 15px;
+  flex: 1;
+  height: fit-content;
 }
 
 .card {
@@ -290,11 +325,24 @@ width: 95%;
   line-height: 44px;
 }
 
+.card-content{
+  display: flex;
+  width: 100%;
+  height: 58vh;
+  flex-direction: column;
+}
+
+.card-content > p {
+  overflow: hidden;
+  height: 51%;
+}
+
 .details-container {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 8px 0;
+  height: 10%;
 }
 
 .client {
@@ -546,11 +594,47 @@ width: 95%;
     padding: 16px 143px;
   }
 
+  #popup-content {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 3% 2%;
+    overflow: hidden;
+  }
+  
+
+  #interactions {
+    width: 31%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #see-project-btn.cta-btn {
+    margin-bottom: 0;
+  }
+
   #headline {
     background-image: url(assets/headline/Desktop/Header\ bg@2x.png);
     background-size: auto 100%;
     align-items: center;
     justify-content: center;
+  }
+
+  .details-container + img {
+    align-self: center;
+    max-width: 570px;
+  }
+
+  #popup-description {
+    width: 65%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #interactions .dividers {
+    margin: 20px 0;
   }
 
   #headline .primary-text {
@@ -735,7 +819,9 @@ width: 95%;
   .tags {
     margin: 40px 0;
   }
-
+#interactions .tags {
+  margin:0;
+}
   #about-container {
     flex-direction: row;
     padding: 166px 143px;
