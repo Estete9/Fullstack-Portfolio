@@ -188,7 +188,6 @@ li div p {
   margin-top: 8%;
 }
 
-
 .tags {
   list-style: none;
   display: flex;
@@ -357,7 +356,6 @@ li div p {
 .cta-btns .cta-btn {
   font-size: 15px;
   flex: 1;
-  height: fit-content;
   margin-bottom: 0;
 }
 
@@ -823,7 +821,7 @@ li div p {
   #interactions .tags {
     margin: 0;
   }
-  
+
   #about-container {
     flex-direction: row;
     padding: 166px 143px;
