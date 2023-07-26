@@ -17,7 +17,7 @@ const project2 = {
   client: 'CANOPY',
   role: 'Back End Dev',
   description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
   imgSrc: 'assets/works/Portfolio1.png',
   techs: ['HTML', 'CSS', 'JavaScript'],
   liveVersion: '/',
@@ -160,23 +160,21 @@ for (let i = 0; i < projectBtns.length; i += 1) {
 
 const form = document.getElementById('contact-form');
 
+function showError() {
+  const error = document.querySelector('small');
+  error.className = 'show';
+  error.innerText = 'email format error.';
+}
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const emailForm = form.elements['user-email'];
   let emailValid = false;
-  if(emailForm.value === emailForm.value.toLowerCase()) {
+  if (emailForm.value === emailForm.value.toLowerCase()) {
     emailValid = true;
   }
-  console.log('emailValid is ' + emailValid)
   if (emailValid) {
     form.submit();
   }
   showError();
 });
-
-
-function showError() {
-  const error = document.querySelector('small')
-  error.className = 'show';
-  error.innerText = 'email format error.';
-}
