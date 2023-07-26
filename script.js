@@ -1,35 +1,35 @@
 // DYNAMICALLY POPULATED PROJECTS
-const workSection = document.getElementById('works-container');
+const workSection = document.getElementById("works-container");
 const project1 = {
-  name: 'Multi-Post Stories',
-  client: 'CANOPY',
-  role: 'Full Stack Dev',
+  name: "Multi-Post Stories",
+  client: "CANOPY",
+  role: "Full Stack Dev",
   description:
-    'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  imgSrc: 'assets/works/Portfolio2.png',
-  techs: ['HTML', 'CSS', 'JavaScript'],
-  liveVersion: '/',
-  source: '/',
-  year: '2022',
+    "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+  imgSrc: "assets/works/Portfolio2.png",
+  techs: ["HTML", "CSS", "JavaScript"],
+  liveVersion: "/",
+  source: "/",
+  year: "2022",
 };
 const project2 = {
-  name: 'Tonic',
-  client: 'CANOPY',
-  role: 'Back End Dev',
+  name: "Tonic",
+  client: "CANOPY",
+  role: "Back End Dev",
   description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
-  imgSrc: 'assets/works/Portfolio1.png',
-  techs: ['HTML', 'CSS', 'JavaScript'],
-  liveVersion: '/',
-  source: '/',
-  year: '2015',
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
+  imgSrc: "assets/works/Portfolio1.png",
+  techs: ["HTML", "CSS", "JavaScript"],
+  liveVersion: "/",
+  source: "/",
+  year: "2015",
 };
 const projects = [project1, project2];
 
 for (let i = 0; i < projects.length; i += 1) {
   const project = projects[i];
-  const cardWrapper = document.createElement('div');
-  cardWrapper.className = 'card work';
+  const cardWrapper = document.createElement("div");
+  cardWrapper.className = "card work";
   const cardWrapperHtml = `
     <img
       class='card-img'
@@ -61,39 +61,39 @@ for (let i = 0; i < projects.length; i += 1) {
   workSection.appendChild(cardWrapper);
 }
 // MOBILE MENU LOGIC
-const menuBtn = document.querySelector('#menu-btn img');
-const menu = document.querySelector('#menu');
-const menuElems = document.querySelectorAll('#menu a');
+const menuBtn = document.querySelector("#menu-btn img");
+const menu = document.querySelector("#menu");
+const menuElems = document.querySelectorAll("#menu a");
 let showMenu = false;
-menuBtn.style.zIndex = '3';
+menuBtn.style.zIndex = "3";
 
 menuBtn.onclick = function () {
   if (!showMenu) {
-    menu.classList.add('mobile-menu');
-    menu.style.display = 'flex';
-    menuBtn.setAttribute('src', 'assets/header/menu-close.svg');
+    menu.classList.add("mobile-menu");
+    menu.style.display = "flex";
+    menuBtn.setAttribute("src", "assets/header/menu-close.svg");
     showMenu = true;
   } else {
-    menu.classList.remove('mobile-menu');
-    menu.style.display = 'none';
-    menuBtn.setAttribute('src', 'assets/header/menu.svg');
+    menu.classList.remove("mobile-menu");
+    menu.style.display = "none";
+    menuBtn.setAttribute("src", "assets/header/menu.svg");
     showMenu = false;
   }
 };
 
 menuElems.forEach((element) => {
   element.onclick = function () {
-    menu.classList.remove('mobile-menu');
-    menu.style.display = 'none';
-    menuBtn.setAttribute('src', 'assets/header/menu.svg');
+    menu.classList.remove("mobile-menu");
+    menu.style.display = "none";
+    menuBtn.setAttribute("src", "assets/header/menu.svg");
     showMenu = false;
   };
 });
 
 // POPUP LOGIC
-const projectBtsNodes = document.querySelectorAll('.card-content .cta-btn');
-const overlay = document.querySelector('#overlay');
-const blur = document.querySelector('#blur');
+const projectBtsNodes = document.querySelectorAll(".card-content .cta-btn");
+const overlay = document.querySelector("#overlay");
+const blur = document.querySelector("#blur");
 
 const popupCard = `
 <div id='popup-header'>
@@ -128,30 +128,55 @@ overlay.innerHTML = popupCard;
 
 const projectBtns = Array.from(projectBtsNodes);
 
-const closeBtn = document.querySelector('#popup-close');
+const closeBtn = document.querySelector("#popup-close");
 
 function closePopup() {
-  overlay.className = '';
-  blur.className = '';
-  closeBtn.className = '';
+  overlay.className = "";
+  blur.className = "";
+  closeBtn.className = "";
 }
 
 closeBtn.onclick = closePopup;
 
 function openPopUp(index) {
-  if (overlay.className !== 'open') {
-    overlay.className = 'open';
-    blur.className = 'open';
-    closeBtn.className = 'open';
-    document.getElementById('popup-title').textContent = projects[index].name;
-    document.querySelector('.client').textContent = projects[index].client;
-    document.querySelector('.role').textContent = projects[index].role;
-    document.querySelector('.year').textContent = projects[index].year;
-    document.querySelector('#overlay > img').src = projects[index].imgSrc;
+  if (overlay.className !== "open") {
+    overlay.className = "open";
+    blur.className = "open";
+    closeBtn.className = "open";
+    document.getElementById("popup-title").textContent = projects[index].name;
+    document.querySelector(".client").textContent = projects[index].client;
+    document.querySelector(".role").textContent = projects[index].role;
+    document.querySelector(".year").textContent = projects[index].year;
+    document.querySelector("#overlay > img").src = projects[index].imgSrc;
   }
 }
 
 for (let i = 0; i < projectBtns.length; i += 1) {
   const btn = projectBtns[i];
-  btn.addEventListener('click', () => openPopUp(i));
+  btn.addEventListener("click", () => openPopUp(i));
+}
+
+// FORM VALIDATION LOGIC
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const emailForm = form.elements["user-email"];
+  let emailValid = false;
+  if(emailForm.value === emailForm.value.toLowerCase()) {
+    emailValid = true;
+  }
+  console.log('emailValid is ' + emailValid)
+  if (emailValid) {
+    form.submit();
+  }
+  showError();
+});
+
+
+function showError() {
+  const error = document.querySelector('small')
+  error.className = "show";
+  error.innerText = "email format error.";
 }
