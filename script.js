@@ -1,11 +1,9 @@
-const body = document.querySelector('body');
-
 // DYNAMICALLY POPULATED PROJECTS
 const workSection = document.getElementById('works-container');
-let projects = [];
+const projects = [];
 
 for (let i = 0; i < 4; i++) {
-  let project = {
+  const project = {
     name: 'Tonic',
     client: 'CANOPY',
     role: 'Back End Dev',
@@ -23,7 +21,7 @@ for (let i = 0; i < 4; i++) {
 for (const project of projects) {
   const cardWrapper = document.createElement('div');
   cardWrapper.className = 'card work';
-  let cardWrapperHtml = `
+  const cardWrapperHtml = `
     <img
       class='card-img'
       src='${project.imgSrc}'
@@ -88,7 +86,7 @@ const projectBtsNodes = document.querySelectorAll('.card-content .cta-btn');
 const overlay = document.querySelector('#overlay');
 const blur = document.querySelector('#blur');
 
-let popupCard = `
+const popupCard = `
 <div id='popup-header'>
   <h1 id='popup-title'>${projects[0].name}</h1>
   <img id='popup-close' src='assets/header/cancel.svg' onclick='closePopup()' alt=''>
@@ -119,11 +117,11 @@ let popupCard = `
 `;
 overlay.innerHTML = popupCard;
 
-let projectBtns = Array.from(projectBtsNodes);
+const projectBtns = Array.from(projectBtsNodes);
 
 const closeBtn = document.querySelector('#popup-close');
 
-for (btn of projectBtns) {
+for (const btn of projectBtns) {
   btn.addEventListener('click', function () {
     if (overlay.className !== 'open') {
       overlay.className = 'open';
