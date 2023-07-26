@@ -1,22 +1,30 @@
 // DYNAMICALLY POPULATED PROJECTS
 const workSection = document.getElementById('works-container');
-const projects = [];
-
-for (let i = 0; i < 4; i += 1) {
-  const project = {
-    name: 'Tonic',
-    client: 'CANOPY',
-    role: 'Back End Dev',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
-    imgSrc: 'assets/works/Portfolio1.png',
-    techs: ['HTML', 'CSS', 'JavaScript'],
-    liveVersion: '/',
-    source: '/',
-    year: '2022',
-  };
-  projects.push(project);
-}
+const project1 = {
+  name: 'Multi-Post Stories',
+  client: 'CANOPY',
+  role: 'Full Stack Dev',
+  description:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  imgSrc: 'assets/works/Portfolio2.png',
+  techs: ['HTML', 'CSS', 'JavaScript'],
+  liveVersion: '/',
+  source: '/',
+  year: '2022',
+};
+const project2 = {
+  name: 'Tonic',
+  client: 'CANOPY',
+  role: 'Back End Dev',
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
+  imgSrc: 'assets/works/Portfolio1.png',
+  techs: ['HTML', 'CSS', 'JavaScript'],
+  liveVersion: '/',
+  source: '/',
+  year: '2015',
+};
+const projects = [project1, project2];
 
 for (let i = 0; i < projects.length; i += 1) {
   const project = projects[i];
