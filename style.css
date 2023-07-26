@@ -185,7 +185,15 @@ li div p {
 #interactions {
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  margin-top: 8%;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 #interactions .tags {
@@ -216,15 +224,6 @@ li div p {
 .card-content > p {
   overflow: hidden;
   height: 51%;
-}
-
-.tags {
-  list-style: none;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin: 12px 0;
-  flex-wrap: wrap;
 }
 
 .primary-text + p + p {
@@ -818,12 +817,10 @@ li div p {
     cursor: pointer;
   }
 
-  .tags {
-    margin: 40px 0;
-  }
   #interactions .tags {
     margin: 0;
   }
+  
   #about-container {
     flex-direction: row;
     padding: 166px 143px;
