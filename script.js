@@ -10,12 +10,12 @@ for (let i = 0; i < 4; i++) {
     client: 'CANOPY',
     role: 'Back End Dev',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
-    imgSrc: "assets/works/Portfolio1.png",
-    techs: ["HTML", "CSS", "JavaScript"],
-    liveVersion: "/",
-    source: "/",
-    year: "2022",
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
+    imgSrc: 'assets/works/Portfolio1.png',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    liveVersion: '/',
+    source: '/',
+    year: '2022',
   };
   projects.push(project);
 }
@@ -100,20 +100,19 @@ let popupCard = `
   <img src='./assets/works/Counter.png' alt='' />
   <p class='year'>${projects[0].year}</p>
 </div>
-
-<img src="${projects[0].imgSrc}" alt="" />
-<div id="popup-content">
-  <p id="popup-description"> ${projects[0].description}</p>
-  <div id="interactions">
-    <ul class="tags">
-      <li class="tag">HTML</li>
-      <li class="tag">CSS</li>
-      <li class="tag">JavaScript</li>
+<img src='${projects[0].imgSrc}' alt='' />
+<div id='popup-content'>
+  <p id='popup-description'> ${projects[0].description}</p>
+  <div id='interactions'>
+    <ul class='tags'>
+      <li class='tag'>HTML</li>
+      <li class='tag'>CSS</li>
+      <li class='tag'>JavaScript</li>
     </ul>
-    <hr class="dividers" />
-    <div class="cta-btns">
-      <button class="cta-btn">See live <img src="./assets/header/Export.svg" alt="see live project button"/></button>
-      <button class="cta-btn">See source <img src="./assets/header/Frame.svg" alt="see code button"/></button>
+    <hr class='dividers' />
+    <div class='cta-btns'>
+      <button class='cta-btn'>See live <img src='./assets/header/Export.svg' alt='see live project button'/></button>
+      <button class='cta-btn'>See source <img src='./assets/header/Frame.svg' alt='see code button'/></button>
     </div>
   </div>
 </div>
