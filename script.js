@@ -7,6 +7,7 @@ const menuElems = document.querySelectorAll("#menu a");
 const workSection = document.getElementById("works-container");
 let showMenu = false;
 
+// DYNAMICALLY POPULATED PROJECTS
 let projects = [];
 
 for (let i = 0; i < 4; i++) {
@@ -85,40 +86,47 @@ menuElems.forEach((element) => {
 });
 
 // POPUP LOGIC
-const projectBtn = document.getElementById("see-project-btn");
-const popupWrapper = document.createElement("section");
-projectBtn.onclick = function() {
-popupWrapper.style.visibility = 'visible'
-}
-popupWrapper.className = "popup";
-let popupCard = `
-  <h1 id="popup-title">${projects[0].name}</h1>
-  <div class="details-container">
-    <p class="client">${projects[0].client}</p>
-    <img src="/Counter.png" alt="" />
-    <p class="role">${projects[0].role}</p>
-    <img src="/Counter.png" alt="" />
-    <p class="year">${projects[0].year}</p>
-  </div>
+const projectBtns = document.querySelectorAll(".card-content .cta-btn");
+const overlay = document.querySelector(".overlay");
+const blur = document.querySelector('.blur')
 
-  <img src="Portfolio1.png" alt="" />
-  <p>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book. It has survived not only five centuries, but also
-    the leap into electronic typesetting, remaining essent
-  </p>
-  <ul class="tags">
-    <li class="tag">HTML</li>
-    <li class="tag">CSS</li>
-    <li class="tag">JavaScript</li>
-  </ul>
-  <hr class="dividers" />
-  <div class="cta-btns">
-    <button class="cta-btn">See live</button>
-    <button class="cta-btn">See source</button>
-  </div>
+let popupCard = `
+<h1 id="popup-title">${projects[0].name}</h1>
+<img src="./assets/header/cancel.svg" alt="close button" />
+<div class="details-container">
+  <p class="client">${projects[0].client}</p>
+  <img src="./assets/works/Counter.png" alt="" />
+  <p class="role">${projects[0].role}</p>
+  <img src="./assets/works/Counter.png" alt="" />
+  <p class="year">${projects[0].year}</p>
+</div>
+
+<img src="${projects[0].imgSrc}" alt="" />
+<p> ${projects[0].description}</p>
+<ul class="tags">
+  <li class="tag">HTML</li>
+  <li class="tag">CSS</li>
+  <li class="tag">JavaScript</li>
+</ul>
+<hr class="dividers" />
+<div class="cta-btns">
+  <button class="cta-btn">See live</button>
+  <button class="cta-btn">See source</button>
+</div>
 `;
-popupWrapper.innerHTML = popupCard;
-body.appendChild(popupWrapper)
+
+projectBtns.forEach((btn) => {
+  btn.onclick = function () {
+    overlay.style.display = "flex";
+    blur.style.display = "flex";
+    overlay.innerHTML = popupCard;
+    body.appendChild(popupWrapper);
+  };
+});
+
+const closeBtn = document.querySelector("#popup-close-btn");
+
+closeBtn.onclick = function () {
+  overlay.style.display = "none";
+  blur.style.display = "none";
+};
