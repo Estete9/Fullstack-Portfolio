@@ -1,4 +1,4 @@
-// DYNAMICALLY POPULATED PROJECTS
+// DYNAMICALLY POPULATED PROJECTS  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const workSection = document.getElementById('works-container');
 const project1 = {
   name: 'Multi-Post Stories',
@@ -90,7 +90,7 @@ menuElems.forEach(element => {
   };
 });
 
-// POPUP LOGIC
+// POPUP LOGIC  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const projectBtsNodes = document.querySelectorAll('.card-content .cta-btn');
 const overlay = document.querySelector('#overlay');
 const blur = document.querySelector('#blur');
@@ -156,7 +156,7 @@ for (let i = 0; i < projectBtns.length; i += 1) {
   btn.addEventListener('click', () => openPopUp(i));
 }
 
-// FORM VALIDATION LOGIC
+// FORM VALIDATION LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const form = document.getElementById('contact-form');
 
@@ -175,29 +175,43 @@ form.addEventListener('submit', event => {
   }
   if (emailValid) {
     form.submit();
+    // TODO clean the local storage storage
   }
   showError();
 });
 
-// FORM'S LOCAL STORAGE
+// FORM'S LOCAL STORAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const formElements = document.querySelectorAll('#contact-form *');
-const formElementsArr = Array.from(formElements);
+const elementsArr = Array.from(formElements);
 // save the form's elements' values into the local storage
 function storeFormValues(element) {
-  console.log('changed and stored')
-  localStorage.setItem(element.id, element.value)
+  console.log('changed and stored');
+  localStorage.setItem(element.id, element.value);
 }
 // loop through all these elements
-for (let i = 0; i < formElementsArr.length; i += 1) {
-  console.log('loop started')
+for (let i = 0; i < elementsArr.length; i += 1) {
+  console.log('loop started');
   // set an onchange function that saves the value in the form's element
-  formElementsArr[i].onchange = () => storeFormValues(formElementsArr[i]);
-  console.log(formElementsArr[i].id)
+  elementsArr[i].onchange = () => storeFormValues(elementsArr[i]);
+  console.log(elementsArr[i].id);
 }
 
-//  REPOPULATE FORM'S ELEMENTS' CONTENT
-// find a way to run the code when the page loads
-// repopulate the form's elements with values from the local storage
+//  REPOPULATE FORM'S ELEMENTS' CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+function getFromStorage(id) {
+  return localStorage.getItem(id);
+}
+
+// loads from local storage and updates the form's content
+function repopulateForm() {
+  console.log('repopulate start')
+  for (let i = 0; i < elementsArr.length; i += 1) {
+    // console.log('the element ' + elementsArr[i].id)
+    elementsArr[i].value = getFromStorage(elementsArr[i].id);
+    console.log("this was loaded " + elementsArr[0].value)
+  }
+}
+
+window.onload = repopulateForm();
 localStorage.setItem;
