@@ -17,7 +17,7 @@ const project2 = {
   client: 'CANOPY',
   role: 'Back End Dev',
   description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
   imgSrc: 'assets/works/Portfolio1.png',
   techs: ['HTML', 'CSS', 'JavaScript'],
   liveVersion: '/',
@@ -81,7 +81,7 @@ menuBtn.onclick = function () {
   }
 };
 
-menuElems.forEach((element) => {
+menuElems.forEach(element => {
   element.onclick = function () {
     menu.classList.remove('mobile-menu');
     menu.style.display = 'none';
@@ -166,7 +166,7 @@ function showError() {
   error.innerText = 'email format error.';
 }
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', event => {
   event.preventDefault();
   const emailForm = form.elements['user-email'];
   let emailValid = false;
@@ -178,3 +178,26 @@ form.addEventListener('submit', (event) => {
   }
   showError();
 });
+
+// FORM'S LOCAL STORAGE
+
+const formElements = document.querySelectorAll('#contact-form *');
+const formElementsArr = Array.from(formElements);
+// save the form's elements' values into the local storage
+function storeFormValues(element) {
+  console.log('changed and stored')
+  localStorage.setItem(element.id, element.value)
+}
+// loop through all these elements
+for (let i = 0; i < formElementsArr.length; i += 1) {
+  console.log('loop started')
+  // set an onchange function that saves the value in the form's element
+  formElementsArr[i].onchange = () => storeFormValues(formElementsArr[i]);
+  console.log(formElementsArr[i].id)
+}
+
+//  REPOPULATE FORM'S ELEMENTS' CONTENT
+// find a way to run the code when the page loads
+// repopulate the form's elements with values from the local storage
+
+localStorage.setItem;
