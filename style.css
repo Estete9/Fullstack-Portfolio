@@ -17,12 +17,25 @@ body {
 small {
   margin-left: 5%;
   display: none;
-  background-color: #f6e25e;
+  background-color: #e26432;
+  color: white;
   padding: 4px 15px;
 }
 
 small.show {
-  display: inline;
+  display: flex;
+  animation: shake 0.3s ease-in-out;
+  animation-fill-mode: both;
+  position: relative;
+  left: 24%;
+  margin-top: -7%;
+  width: 33%;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%, 75% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
 }
 
 header {
