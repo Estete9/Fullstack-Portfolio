@@ -186,15 +186,12 @@ const formElements = document.querySelectorAll('#contact-form *');
 const elementsArr = Array.from(formElements);
 // save the form's elements' values into the local storage
 function storeFormValues(element) {
-  console.log('changed and stored');
   localStorage.setItem(element.id, element.value);
 }
 // loop through all these elements
 for (let i = 0; i < elementsArr.length; i += 1) {
-  console.log('loop started');
   // set an onchange function that saves the value in the form's element
   elementsArr[i].onchange = () => storeFormValues(elementsArr[i]);
-  console.log(elementsArr[i].id);
 }
 
 //  REPOPULATE FORM'S ELEMENTS' CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -205,11 +202,8 @@ function getFromStorage(id) {
 
 // loads from local storage and updates the form's content
 function repopulateForm() {
-  console.log('repopulate start')
   for (let i = 0; i < elementsArr.length; i += 1) {
-    // console.log('the element ' + elementsArr[i].id)
     elementsArr[i].value = getFromStorage(elementsArr[i].id);
-    console.log("this was loaded " + elementsArr[0].value)
   }
 }
 
