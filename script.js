@@ -175,6 +175,7 @@ form.addEventListener('submit', event => {
   }
   if (emailValid) {
     form.submit();
+    form.reset();
   } else {
     showError();
   }
