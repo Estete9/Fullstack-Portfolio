@@ -1,4 +1,4 @@
-// DYNAMICALLY POPULATED PROJECTS  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// DYNAMICALLY POPULATED PROJECT  \\
 const workSection = document.getElementById('works-container');
 const project1 = {
   name: 'Multi-Post Stories',
@@ -81,7 +81,7 @@ menuBtn.onclick = function () {
   }
 };
 
-menuElems.forEach(element => {
+menuElems.forEach((element) => {
   element.onclick = function () {
     menu.classList.remove('mobile-menu');
     menu.style.display = 'none';
@@ -90,7 +90,7 @@ menuElems.forEach(element => {
   };
 });
 
-// POPUP LOGIC  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// POPUP LOGIC  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const projectBtsNodes = document.querySelectorAll('.card-content .cta-btn');
 const overlay = document.querySelector('#overlay');
 const blur = document.querySelector('#blur');
@@ -156,17 +156,17 @@ for (let i = 0; i < projectBtns.length; i += 1) {
   btn.addEventListener('click', () => openPopUp(i));
 }
 
-// FORM VALIDATION LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// FORM VALIDATION LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const form = document.getElementById('contact-form');
 
 function showError() {
   const error = document.querySelector('small');
   error.className = 'show';
-  error.innerText = 'Please, use only lowercase';
+  error.innerText = 'Please, email with only lowercase.';
 }
 
-form.addEventListener('submit', event => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   const emailForm = form.elements['user-email'];
   let emailValid = false;
@@ -175,29 +175,26 @@ form.addEventListener('submit', event => {
   }
   if (emailValid) {
     form.submit();
-    // TODO clean the local storage storage
+    // TODO vvv write code `form.reset()` here vvv
+  } else {
+    showError();
   }
-  showError();
 });
 
-// FORM'S LOCAL STORAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+// FORM'S LOCAL STORAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const formElements = document.querySelectorAll('#contact-form *');
-const elementsArr = Array.from(formElements);
+const elemArr = Array.from(formElements);
 // save the form's elements' values into the local storage
 function storeFormValues(element) {
-  console.log('changed and stored');
   localStorage.setItem(element.id, element.value);
 }
 // loop through all these elements
-for (let i = 0; i < elementsArr.length; i += 1) {
-  console.log('loop started');
+for (let i = 0; i < elemArr.length; i += 1) {
   // set an onchange function that saves the value in the form's element
-  elementsArr[i].onchange = () => storeFormValues(elementsArr[i]);
-  console.log(elementsArr[i].id);
+  elemArr[i].onchange = () => storeFormValues(elemArr[i]);
 }
 
-//  REPOPULATE FORM'S ELEMENTS' CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//  REPOPULATE FORM'S ELEMENTS' CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 function getFromStorage(id) {
   return localStorage.getItem(id);
@@ -205,13 +202,9 @@ function getFromStorage(id) {
 
 // loads from local storage and updates the form's content
 function repopulateForm() {
-  console.log('repopulate start')
-  for (let i = 0; i < elementsArr.length; i += 1) {
-    // console.log('the element ' + elementsArr[i].id)
-    elementsArr[i].value = getFromStorage(elementsArr[i].id);
-    console.log("this was loaded " + elementsArr[0].value)
+  for (let i = 0; i < elemArr.length; i += 1) {
+    elemArr[i].value = getFromStorage(elemArr[i].id);
   }
 }
 
 window.onload = repopulateForm();
-localStorage.setItem;
