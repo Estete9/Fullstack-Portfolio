@@ -175,7 +175,11 @@ form.addEventListener('submit', event => {
   }
   if (emailValid) {
     form.submit();
+<<<<<<< HEAD
     // TODO add functionality that clears the form when submitted
+=======
+    form.reset();
+>>>>>>> 088ef3ec5a4a274ab264ef94a7d6e8578bb00789
   } else {
     showError();
   }
