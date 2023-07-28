@@ -183,15 +183,15 @@ form.addEventListener('submit', (event) => {
 
 // FORM'S LOCAL STORAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const formElements = document.querySelectorAll('#contact-form *');
-const elementsArr = Array.from(formElements);
+const elemArr = Array.from(formElements);
 // save the form's elements' values into the local storage
 function storeFormValues(element) {
   localStorage.setItem(element.id, element.value);
 }
 // loop through all these elements
-for (let i = 0; i < elementsArr.length; i += 1) {
+for (let i = 0; i < elemArr.length; i += 1) {
   // set an onchange function that saves the value in the form's element
-  elementsArr[i].onchange = () => storeFormValues(elementsArr[i]);
+  elemArr[i].onchange = () => storeFormValues(elemArr[i]);
 }
 
 //  REPOPULATE FORM'S ELEMENTS' CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -202,8 +202,8 @@ function getFromStorage(id) {
 
 // loads from local storage and updates the form's content
 function repopulateForm() {
-  for (let i = 0; i < elementsArr.length; i += 1) {
-    elementsArr[i].value = getFromStorage(elementsArr[i].id);
+  for (let i = 0; i < elemArr.length; i += 1) {
+    elemArr[i].value = getFromStorage(elemArr[i].id);
   }
 }
 
