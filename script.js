@@ -1,4 +1,4 @@
-// DYNAMICALLY POPULATED PROJECTS  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// DYNAMICALLY POPULATED PROJECT  \\
 const workSection = document.getElementById('works-container');
 const project1 = {
   name: 'Multi-Post Stories',
@@ -81,7 +81,7 @@ menuBtn.onclick = function () {
   }
 };
 
-menuElems.forEach(element => {
+menuElems.forEach((element) => {
   element.onclick = function () {
     menu.classList.remove('mobile-menu');
     menu.style.display = 'none';
@@ -90,7 +90,7 @@ menuElems.forEach(element => {
   };
 });
 
-// POPUP LOGIC  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// POPUP LOGIC  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const projectBtsNodes = document.querySelectorAll('.card-content .cta-btn');
 const overlay = document.querySelector('#overlay');
 const blur = document.querySelector('#blur');
@@ -156,7 +156,7 @@ for (let i = 0; i < projectBtns.length; i += 1) {
   btn.addEventListener('click', () => openPopUp(i));
 }
 
-// FORM VALIDATION LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// FORM VALIDATION LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const form = document.getElementById('contact-form');
 
@@ -166,7 +166,7 @@ function showError() {
   error.innerText = 'Please, email with only lowercase.';
 }
 
-form.addEventListener('submit', event => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   const emailForm = form.elements['user-email'];
   let emailValid = false;
@@ -181,8 +181,7 @@ form.addEventListener('submit', event => {
   }
 });
 
-// FORM'S LOCAL STORAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+// FORM'S LOCAL STORAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const formElements = document.querySelectorAll('#contact-form *');
 const elementsArr = Array.from(formElements);
 // save the form's elements' values into the local storage
@@ -195,7 +194,7 @@ for (let i = 0; i < elementsArr.length; i += 1) {
   elementsArr[i].onchange = () => storeFormValues(elementsArr[i]);
 }
 
-//  REPOPULATE FORM'S ELEMENTS' CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//  REPOPULATE FORM'S ELEMENTS' CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 function getFromStorage(id) {
   return localStorage.getItem(id);
@@ -209,4 +208,3 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
-localStorage.setItem;
