@@ -175,9 +175,10 @@ form.addEventListener('submit', event => {
   }
   if (emailValid) {
     form.submit();
-    // TODO clean the local storage storage
+    // TODO add functionality that clears the form when submitted
+  } else {
+    showError();
   }
-  showError();
 });
 
 // FORM'S LOCAL STORAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
