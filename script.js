@@ -163,7 +163,7 @@ const form = document.getElementById('contact-form');
 function showError() {
   const error = document.querySelector('small');
   error.className = 'show';
-  error.innerText = 'Please, use only lowercase';
+  error.innerText = 'Please, email with only lowercase.';
 }
 
 form.addEventListener('submit', (event) => {
