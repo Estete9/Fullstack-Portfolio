@@ -155,3 +155,26 @@ for (let i = 0; i < projectBtns.length; i += 1) {
   const btn = projectBtns[i];
   btn.addEventListener('click', () => openPopUp(i));
 }
+
+// FORM VALIDATION LOGIC
+
+const form = document.getElementById('contact-form');
+
+function showError() {
+  const error = document.querySelector('small');
+  error.className = 'show';
+  error.innerText = 'Please, email with only lowercase.';
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const emailForm = form.elements['user-email'];
+  let emailValid = false;
+  if (emailForm.value === emailForm.value.toLowerCase()) {
+    emailValid = true;
+  }
+  if (emailValid) {
+    form.submit();
+  }
+  showError();
+});
