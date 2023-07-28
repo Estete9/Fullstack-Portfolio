@@ -17,7 +17,7 @@ const project2 = {
   client: 'CANOPY',
   role: 'Back End Dev',
   description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
   imgSrc: 'assets/works/Portfolio1.png',
   techs: ['HTML', 'CSS', 'JavaScript'],
   liveVersion: '/',
@@ -81,7 +81,7 @@ menuBtn.onclick = function () {
   }
 };
 
-menuElems.forEach((element) => {
+menuElems.forEach(element => {
   element.onclick = function () {
     menu.classList.remove('mobile-menu');
     menu.style.display = 'none';
@@ -166,7 +166,7 @@ function showError() {
   error.innerText = 'Please, email with only lowercase.';
 }
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', event => {
   event.preventDefault();
   const emailForm = form.elements['user-email'];
   let emailValid = false;
@@ -175,6 +175,7 @@ form.addEventListener('submit', (event) => {
   }
   if (emailValid) {
     form.submit();
+  } else {
+    showError();
   }
-  showError();
 });
