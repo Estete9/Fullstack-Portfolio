@@ -1,4 +1,4 @@
-// DYNAMICALLY POPULATED PROJECTS
+// DYNAMICALLY POPULATED PROJECT  \\
 const workSection = document.getElementById('works-container');
 const project1 = {
   name: 'Multi-Post Stories',
@@ -17,7 +17,7 @@ const project2 = {
   client: 'CANOPY',
   role: 'Back End Dev',
   description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.',
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
   imgSrc: 'assets/works/Portfolio1.png',
   techs: ['HTML', 'CSS', 'JavaScript'],
   liveVersion: '/',
@@ -90,7 +90,7 @@ menuElems.forEach((element) => {
   };
 });
 
-// POPUP LOGIC
+// POPUP LOGIC  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const projectBtsNodes = document.querySelectorAll('.card-content .cta-btn');
 const overlay = document.querySelector('#overlay');
 const blur = document.querySelector('#blur');
@@ -156,7 +156,7 @@ for (let i = 0; i < projectBtns.length; i += 1) {
   btn.addEventListener('click', () => openPopUp(i));
 }
 
-// FORM VALIDATION LOGIC
+// FORM VALIDATION LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const form = document.getElementById('contact-form');
 
@@ -175,6 +175,36 @@ form.addEventListener('submit', (event) => {
   }
   if (emailValid) {
     form.submit();
+    form.reset();
+  } else {
+    showError();
   }
-  showError();
 });
+
+// FORM'S LOCAL STORAGE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+const formElements = document.querySelectorAll('#contact-form *');
+const elemArr = Array.from(formElements);
+// save the form's elements' values into the local storage
+function storeFormValues(element) {
+  localStorage.setItem(element.id, element.value);
+}
+// loop through all these elements
+for (let i = 0; i < elemArr.length; i += 1) {
+  // set an onchange function that saves the value in the form's element
+  elemArr[i].onchange = () => storeFormValues(elemArr[i]);
+}
+
+//  REPOPULATE FORM'S ELEMENTS' CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+function getFromStorage(id) {
+  return localStorage.getItem(id);
+}
+
+// loads from local storage and updates the form's content
+function repopulateForm() {
+  for (let i = 0; i < elemArr.length; i += 1) {
+    elemArr[i].value = getFromStorage(elemArr[i].id);
+  }
+}
+
+window.onload = repopulateForm();
