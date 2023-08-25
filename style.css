@@ -806,6 +806,7 @@ li div p {
     margin-right: 22px;
     padding: 0 24px;
     flex: 1;
+    width: 334px;
   }
 
   .card:hover {

@@ -1,13 +1,13 @@
 // DYNAMICALLY POPULATED PROJECT  \\
 const workSection = document.getElementById('works-container');
 const project1 = {
-  name: 'Multi-Post Stories',
-  client: 'CANOPY',
+  name: 'TodoList - Task Manager',
+  client: 'Microverse',
   role: 'Full Stack Dev',
   description:
-    'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  imgSrc: 'assets/works/Portfolio2.png',
-  techs: ['HTML', 'CSS', 'JavaScript'],
+    "A minimalist task manager that allows you to add and remove tasks, and also update their contents or it's status to completed.",
+  imgSrc: 'assets/works/Desktop/Screenshot-todo-list-orange.png',
+  techs: ['HTML', 'SCSS', 'JavaScript', 'Webpack', 'Jest'],
   liveVersion: '/',
   source: '/',
   year: '2022',
@@ -26,8 +26,7 @@ const project2 = {
 };
 const projects = [project1, project2];
 
-for (let i = 0; i < projects.length; i += 1) {
-  const project = projects[i];
+projects.forEach((project, index) => {
   const cardWrapper = document.createElement('div');
   cardWrapper.className = 'card work';
   const cardWrapperHtml = `
@@ -48,10 +47,7 @@ for (let i = 0; i < projects.length; i += 1) {
       <p class='work-description'>
         ${project.description}
       </p>
-      <ul class='tags'>
-        <li class='tag'>${project.techs[0]}</li>
-        <li class='tag'>${project.techs[1]}</li>
-        <li class='tag'>${project.techs[2]}</li>
+      <ul id='tech${index}' class='tags'>
       </ul>
       <button id='see-project-btn' class='cta-btn'>See project</button>
     </div>
@@ -59,7 +55,16 @@ for (let i = 0; i < projects.length; i += 1) {
 
   cardWrapper.innerHTML = cardWrapperHtml;
   workSection.appendChild(cardWrapper);
-}
+  const tagsContainer = document.getElementById(`tech${index}`);
+
+  project.techs.forEach((tech) => {
+    const li = document.createElement('li');
+    li.className = 'tag';
+    li.textContent = tech;
+    tagsContainer.appendChild(li);
+  });
+});
+
 // MOBILE MENU LOGIC
 const menuBtn = document.querySelector('#menu-btn img');
 const menu = document.querySelector('#menu');
