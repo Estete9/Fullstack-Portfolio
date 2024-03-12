@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
-  <h1><b>Where's the Money App</b></h1>
+  <h1><b>Professional Portfolio</b></h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -8,7 +8,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Where's the Money](#-recipe-app-)
+- [📖 Professional Portfolio](#-recipe-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -28,9 +28,18 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Where's the Money <a name="about-project"></a>
+## 📖 Professional Portfolio <a name="about-project"></a>
 
-The **Where's the Money** This is a mobile web application where you can manage your budget: you have a list of activities associated with a category so that you can see how much money you spent and on what.
+I'm passionate about using technology to empower people, whether it's building innovative solutions or creating positive change with NGOs.
+
+My journey began with Android development, where I crafted apps that make a difference, like the one for Lintu Boardgames. Consulting work with startups further fueled my desire to build impactful products.
+
+Microverse transformed me into a full-stack developer with a strong leadership drive. Leading projects like "BookCar" honed my teamwork skills, while co-founding "Fullstackers Extraordinaire" solidified my belief in fostering supportive communities.
+
+My diverse skill set (React, Ruby on Rails, Android) and dedication to results (Top 5 GitHub contributors in Ecuador!) are matched by my desire to help others. I'm eager to join a team that shares this passion and allows me to create a lasting impact.
+
+See my [featured projects](https://estete9.github.io/Fullstack-Portfolio/#works-container) to explore my diverse skill set in action!  I'm eager to join a team that shares my passion for helping others.
+
 
 ## 🛠 Built With <a name="built-with"></a> 
 
@@ -80,9 +89,7 @@ The **Where's the Money** This is a mobile web application where you can manage 
 <!-- LIVE DEMO  -->
 ## 💻 Live Demo <a name="live-demo"></a>
 
-Check the live demo [here](https://wheres-the-money.onrender.com)
-
-Check the documentation recording [here](https://www.loom.com/share/2452b6b963424aca8b3f9eec7a48f281) 
+Check the live demo [here](https://estete9.github.io/Fullstack-Portfolio)
 
 <!-- GETTING STARTED -->
 
