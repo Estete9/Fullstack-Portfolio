@@ -22,6 +22,10 @@ small {
   height: 33px;
 }
 
+.card-img {
+  width: 100%;
+}
+
 small.show {
   display: flex;
   animation: shake 0.3s ease-in-out;
