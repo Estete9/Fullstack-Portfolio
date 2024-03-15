@@ -89,7 +89,9 @@ menuBtn.onclick = function () {
 menuElems.forEach((element) => {
   element.onclick = function () {
     menu.classList.remove('mobile-menu');
-    menu.style.display = 'none';
+    if(window.innerWidth <= 768){
+      menu.style.display = 'none';
+    } 
     menuBtn.setAttribute('src', 'assets/header/menu.svg');
     showMenu = false;
   };
