@@ -89,6 +89,7 @@ menuBtn.onclick = function () {
 menuElems.forEach((element) => {
   element.onclick = function () {
     menu.classList.remove('mobile-menu');
+    // hides menu if only if it's in a mobile screen
     if(window.innerWidth <= 768){
       menu.style.display = 'none';
     } 
