@@ -36,7 +36,16 @@
 
 # 📖 [Fullstack Personal Portfolio] <a name="about-project"></a>
 
-**[Fullstack personal portfolio]** is a starting project to test linters and core files like gitignore with GitHub, HTML, CSS, and Javascript
+
+I'm passionate about using technology to empower people, whether it's building innovative solutions or creating positive change with NGOs.
+
+My journey began with Android development, where I crafted apps that make a difference, like the one for Lintu Boardgames. Consulting work with startups further fueled my desire to build impactful products.
+
+Microverse transformed me into a full-stack developer with a strong leadership drive. Leading projects like "BookCar" honed my teamwork skills, while co-founding "Fullstackers Extraordinaire" solidified my belief in fostering supportive communities.
+
+My diverse skill set (React, Ruby on Rails, Android) and dedication to results (Top 5 GitHub contributors in Ecuador!) are matched by my desire to help others. I'm eager to join a team that shares this passion and allows me to create a lasting impact.
+
+See my [featured projects](https://estete9.github.io/Fullstack-Portfolio/#works-container) to explore my diverse skill set in action!  I'm eager to join a team that shares my passion for helping others.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,11 +65,18 @@
 </details>
 <details>
 <summary>Languages</summary>
-<ul>
-   <li>HTML & CSS</li>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
   </ul>
 </details>
-
+<details>
+<summary>Frameworks</summary>
+  <ul>
+    <li><a href="https://tailwindcss.com">Tailwind</a></li>
+  </ul>
+</details>
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
