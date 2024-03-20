@@ -668,6 +668,10 @@ li div p {
     justify-content: center;
   }
 
+  #carousel-wrapper {
+    height: 20rem;
+    width: 100%;
+  }
   .details-container + img {
     align-self: center;
     max-width: 530px;

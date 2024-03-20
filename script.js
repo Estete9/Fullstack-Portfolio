@@ -42,7 +42,7 @@ projects.forEach((project, index) => {
         <img src='assets/works/Counter.png' alt='' />
         <p class='role'>${project.role}</p>
         <img src='assets/works/Counter.png' alt='' />
-        <p class='year'>${projects.year}</p>
+        <p class='year'>${project.year}</p>
       </div>
       <p class='work-description'>
         ${project.description}
@@ -104,33 +104,76 @@ const overlay = document.querySelector('#overlay');
 const blur = document.querySelector('#blur');
 
 const popupCard = `
-<div id='popup-header'>
-  <h1 id='popup-title'>${projects[0].name}</h1>
-  <img id='popup-close' src='assets/header/cancel.svg' alt=''>
-</div>
-<div class='details-container'>
-  <p class='client'>${projects[0].client}</p>
-  <img src='./assets/works/Counter.png' alt='' />
-  <p class='role'>${projects[0].role}</p>
-  <img src='./assets/works/Counter.png' alt='' />
-  <p class='year'>${projects[0].year}</p>
-</div>
-<img src='${projects[0].imgSrc}' alt='' />
-<div id='popup-content'>
-  <p id='popup-description'> ${projects[0].description}</p>
-  <div id='interactions'>
-    <ul class='tags'>
-      <li class='tag'>HTML</li>
-      <li class='tag'>CSS</li>
-      <li class='tag'>JavaScript</li>
-    </ul>
-    <hr class='dividers' />
-    <div class='cta-btns'>
-      <button class='cta-btn'>See live <img src='./assets/header/Export.svg' alt='see live project button'/></button>
-      <button class='cta-btn'>See source <img src='./assets/header/Frame.svg' alt='see code button'/></button>
+  <div id='popup-header'>
+    <h1 id='popup-title'></h1>
+    <img id='popup-close' src='assets/header/cancel.svg' alt=''>
+  </div>
+  <div class='details-container'>
+    <p id='client'></p>
+    <img src='./assets/works/Counter.png' alt='' />
+    <p id='role'></p>
+    <img src='./assets/works/Counter.png' alt='' />
+    <p id='year'></p>
+  </div>
+    <div id="default-carousel" class="relative">
+      <!-- Carousel wrapper -->
+        <div id="carousel-wrapper" class="overflow-hidden relative h-56 rounded-lg sm:h-64">
+        <!-- Item 1 -->
+        <div class="duration-700 ease-in-out" data-carousel-item>
+            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+            <img id="img1" class="block absolute top-1/2 left-1/2 h-full -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class=" duration-700 ease-in-out" data-carousel-item>
+            <img id="img2" class="block absolute top-1/2 left-1/2 h-full -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class=" duration-700 ease-in-out" data-carousel-item>
+            <img id="img3" class="block absolute top-1/2 left-1/2 h-full -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <span class="hidden">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="hidden">Next</span>
+            </span>
+        </button>
+        </div>
+        <!-- Slider indicators -->
+        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        </div>
+    </div>
+
+	<p class="mt-5">This carousel slider component is part of a larger, open-source library of Tailwind CSS components. Learn
+		more
+		by going to the official <a class="text-blue-600 hover:underline"
+			href="https://flowbite.com/docs/getting-started/introduction/" target="_blank">Flowbite Documentation</a>.
+	</p>
+
+  <div id='popup-content'>
+    <p id='popup-description'> ${projects[0].description}</p>
+    <div id='interactions'>
+      <ul class='tags'>
+        <li class='tag'>HTML</li>
+        <li class='tag'>CSS</li>
+        <li class='tag'>JavaScript</li>
+      </ul>
+      <hr class='dividers' />
+      <div class='cta-btns'>
+        <button class='cta-btn'>See live <img src='./assets/header/Export.svg' alt='see live project button'/></button>
+        <button class='cta-btn'>See source <img src='./assets/header/Frame.svg' alt='see code button'/></button>
+      </div>
     </div>
   </div>
-</div>
 `;
 overlay.innerHTML = popupCard;
 
@@ -151,11 +194,14 @@ function openPopUp(index) {
     overlay.className = 'open';
     blur.className = 'open';
     closeBtn.className = 'open';
+    console.log(projects[index].client)
     document.getElementById('popup-title').textContent = projects[index].name;
-    document.querySelector('.client').textContent = projects[index].client;
-    document.querySelector('.role').textContent = projects[index].role;
-    document.querySelector('.year').textContent = projects[index].year;
-    document.querySelector('#overlay > img').src = projects[index].imgSrc;
+    document.getElementById('client').textContent = projects[index].client;
+    document.getElementById('role').textContent = projects[index].role;
+    document.getElementById('year').textContent = projects[index].year;
+    document.getElementById('img1').src = projects[index].imgSrc;
+    document.getElementById('img2').src = projects[index].imgSrc;
+    document.getElementById('img3').src = projects[index].imgSrc;
   }
 }
 
@@ -216,3 +262,10 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
+
+
+
+
+
