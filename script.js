@@ -8,6 +8,7 @@ const project1 = {
     'A seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API.',
   description:
     'BookCar is a car booking application developed as part of the Microverse Full-Stack Web Development Program’s capstone project. it provides a seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API. This application demonstrates proficiency in full-stack web development, including React, Redux, Tailwind CSS, React-Router, and Rails API development. It showcases the ability to build a robust frontend that communicates effectively with a backend service, and manage application state using modern tools and libraries.',
+  featuredImg: 'assets/works/Desktop/first-project/Screenshot 2024-03-19 154852.png',
   imgsSrc: [
     'assets/works/Desktop/first-project/Screenshot 2024-03-19 154852.png',
     'assets/works/Desktop/first-project/Screenshot 2024-03-19 154910.png',
@@ -30,13 +31,14 @@ const project2 = {
   description: `Take control of your finances easily! 
   This mobile web app help users manage their budget by creating custom categories and tracking expenses with detailed activity lists 
   so users can see exactly where their money goes and make informed spending decisions.`,
+  featuredImg: 'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
   imgsSrc: [
     'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085305.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085319.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085350.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085405.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085428.png',
   ],
   techs: ['Ruby on Rails', 'PostgreSQL', 'SCSS', 'RSpec/Capybara', 'Devise', 'Cancancan'],
   liveVersion: '/',
@@ -53,9 +55,11 @@ const project3 = {
   description: `Built a functional bookstore website using React for a dynamic user experience. 
   Users can browse a list of books, add new ones to their collection, and remove them as needed. 
   The app leverages Redux for state management and SCSS for maintainable and customizable styling.`,
+  featuredImg: 'assets/works/Desktop/third-project/Screenshot 2024-03-21 155139.png',
   imgsSrc: [
     'assets/works/Desktop/third-project/Screenshot 2024-03-20 203836.png',
-    'assets/works/Desktop/third-project/Screenshot 2024-03-20 203913.png',
+    'assets/works/Desktop/third-project/Screenshot 2024-03-21 155129.png',
+    'assets/works/Desktop/third-project/Screenshot 2024-03-21 155139.png',
   ],
   techs: ['React', 'JSX', 'SCSS', 'Redux'],
   liveVersion: '/',
@@ -71,7 +75,7 @@ projects.forEach((project, index) => {
   const cardWrapperHtml = `
   <img
   class='card-img'
-  src='${project.imgsSrc[0]}'
+  src='${project.featuredImg}'
   alt='project screenshot'
   />
   <div class='card-content'>
@@ -148,49 +152,35 @@ const popupCard = `
     <img id='popup-close' src='assets/header/cancel.svg' alt=''>
   </div>
   <div class='details-container'>
-    <p id='client'></p>
+    <p id='popup-client'></p>
     <img src='./assets/works/Counter.png' alt='' />
-    <p id='role'></p>
+    <p id='popup-role'></p>
     <img src='./assets/works/Counter.png' alt='' />
-    <p id='year'></p>
+    <p id='popup-year'></p>
   </div>
-    <div id="default-carousel" class="relative">
-      <!-- Carousel wrapper -->
-        <div id="carousel-wrapper" class="overflow-hidden relative h-56 rounded-lg sm:h-64">
-        <!-- Item 1 -->
-        <div class="duration-700 ease-in-out" data-carousel-item>
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-            <img id="img1" class="block absolute top-1/2 left-1/2 h-full -translate-x-1/2 -translate-y-1/2" alt="...">
-        </div>
-        <!-- Item 2 -->
-        <div class=" duration-700 ease-in-out" data-carousel-item>
-            <img id="img2" class="block absolute top-1/2 left-1/2 h-full -translate-x-1/2 -translate-y-1/2" alt="...">
-        </div>
-        <!-- Item 3 -->
-        <div class=" duration-700 ease-in-out" data-carousel-item>
-            <img id="img3" class="block absolute top-1/2 left-1/2 h-full -translate-x-1/2 -translate-y-1/2" alt="...">
-        </div>
-        <!-- Slider controls -->
-        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                <span class="hidden">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <span class="hidden">Next</span>
-            </span>
-        </button>
-        </div>
-        <!-- Slider indicators -->
-        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        </div>
+
+  <!-- glide carousel  -->
+  <div id="default-carousel" class="glide">
+    <div id="carousel-wrapper" class="glide__track" data-glide-el="track">
+      <ul id="carousel-list" class="glide__slides">
+        <li class="glide__slide">
+          <img id="img1" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="first image" />
+        </li>
+        <li class="glide__slide">
+          <img id="img2" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="second image" />
+        </li>
+        <li class="glide__slide">
+          <img id="img3" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="third image" />
+        </li>
+      </ul>
     </div>
+    <div data-glide-el="controls">
+      <button data-glide-dir="<">prev</button>
+      <button data-glide-dir=">">next</button>
+    </div>
+  </div>
+  <!-- glide carousel  -->
+
   <div id='popup-content'>
     <p id='popup-description'></p>
     <div id='interactions'>
@@ -226,15 +216,19 @@ function openPopUp(index) {
     overlay.className = 'open';
     blur.className = 'open';
     closeBtn.className = 'open';
-    console.log(projects[index].client)
     document.getElementById('popup-title').textContent = projects[index].name;
-    document.getElementById('client').textContent = projects[index].client;
-    document.getElementById('role').textContent = projects[index].role;
-    document.getElementById('year').textContent = projects[index].year;
+    document.getElementById('popup-client').textContent = projects[index].client;
+    document.getElementById('popup-role').textContent = projects[index].role;
+    document.getElementById('popup-year').textContent = projects[index].year;
     document.getElementById('popup-description').textContent = projects[index].description;
     document.getElementById('img1').src = projects[index].imgsSrc[0];
-    document.getElementById('img2').src = projects[index].imgsSrc[0];
-    document.getElementById('img3').src = projects[index].imgsSrc[0];
+    document.getElementById('img2').src = projects[index].imgsSrc[1];
+    document.getElementById('img3').src = projects[index].imgsSrc[2];
+    document.getElementById('carousel-list').style.width ='100%';
+
+    document.querySelectorAll('.glide__slide').forEach(slide => {
+      slide.style.width = '100%'
+    });
   }
 }
 
@@ -295,6 +289,36 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

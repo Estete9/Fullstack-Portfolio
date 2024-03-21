@@ -23,6 +23,14 @@ small {
 }
 
 .card-img {
+  max-height: 40%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.slide-img {
+  max-height: 19rem;
+  object-fit: contain;
   width: 100%;
 }
 
@@ -46,6 +54,13 @@ small.show {
   50% {
     transform: translateX(10px);
   }
+}
+
+#default-carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -85,6 +100,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: 4% 3%;
+  margin-top: auto;
 }
 
 .mobile-menu {
@@ -338,7 +354,7 @@ li div p {
 
 #popup-description {
   overflow: hidden;
-  height: 25%;
+  max-height: 40%;
 }
 
 #blur {
@@ -392,7 +408,7 @@ li div p {
   height: 95vh;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 35px;
   gap: 12px;
   border-radius: 16px;
   border: 1px solid var(--neutrals-n-40, #dfe1e6);
@@ -422,14 +438,14 @@ li div p {
   height: 10%;
 }
 
-.client {
+.client, #popup-client {
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
   line-height: 16px;
 }
 
-.role {
+.role, #popup-role {
   color: var(--neutrals-n-100, #7a869a);
   font-size: 13px;
   font-style: normal;
@@ -437,12 +453,18 @@ li div p {
   line-height: 16px;
 }
 
-.year {
+.year, #popup-year {
   color: var(--neutrals-n-100, #7a869a);
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
   line-height: 16px;
+}
+
+#popup-client,
+#popup-role,
+#popup-year {
+  font-size: 1rem;
 }
 
 .work-description {
@@ -640,8 +662,12 @@ li div p {
     flex-direction: row;
     gap: 24px;
     padding: 3% 2%;
-    overflow: hidden;
-    height: 100%;
+    /* overflow: hidden; */
+    /* height: 100%; */
+  }
+
+  #carousel-list {
+    height: 85%
   }
 
   #interactions {
@@ -674,7 +700,7 @@ li div p {
 
   #popup-description {
     width: 65%;
-    height: 100%;
+    max-height: 100%;
     overflow: hidden;
   }
 
@@ -833,7 +859,7 @@ li div p {
     margin-bottom: 24px;
   }
 
-  .client {
+  .client, #popup-client {
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
