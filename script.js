@@ -5,38 +5,65 @@ const project1 = {
   client: 'Personal Project',
   role: 'Full Stack Developer',
   shortDescription:
-  'A seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API.',
+    'A seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API.',
   description:
-  'BookCar is a car booking application developed as part of the Microverse Full-Stack Web Development Program’s capstone project. it provides a seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API. This application demonstrates proficiency in full-stack web development, including React, Redux, Tailwind CSS, React-Router, and Rails API development. It showcases the ability to build a robust frontend that communicates effectively with a backend service, and manage application state using modern tools and libraries.',
+    'BookCar is a car booking application developed as part of the Microverse Full-Stack Web Development Program’s capstone project. it provides a seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API. This application demonstrates proficiency in full-stack web development, including React, Redux, Tailwind CSS, React-Router, and Rails API development. It showcases the ability to build a robust frontend that communicates effectively with a backend service, and manage application state using modern tools and libraries.',
   imgsSrc: [
-    'assets/works/Desktop/second-project/Screenshot 2024-03-19 154852.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-03-19 154910.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-03-19 154932.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-03-19 154947.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-03-19 155031.png',
+    'assets/works/Desktop/first-project/Screenshot 2024-03-19 154852.png',
+    'assets/works/Desktop/first-project/Screenshot 2024-03-19 154910.png',
+    'assets/works/Desktop/first-project/Screenshot 2024-03-19 154932.png',
+    'assets/works/Desktop/first-project/Screenshot 2024-03-19 154947.png',
+    'assets/works/Desktop/first-project/Screenshot 2024-03-19 155031.png',
   ],
-  techs: ['React', 'Tailwind', 'PostgreSQL', 'Ruby on Rails', 'Redux'],
+  techs: ['React', 'Tailwind', 'PostgreSQL', 'Ruby on Rails', 'Redux', 'RSpec/Capybara', 'RSwag'],
   liveVersion: '/',
   source: '/',
   year: '2024',
 };
 
 const project2 = {
-  name: 'TodoList - Task Manager',
-  client: 'Microverse',
-  role: 'Full Stack Dev',
+  name: "Where's the Money - Budget Manager",
+  client: 'Personal Project',
+  role: 'Full Stack Developer',
   shortDescription:
-    "A minimalist task manager that allows you to add and remove tasks, and also update their contents or it's status to completed.",
-  description:
-    "A minimalist task manager that allows you to add and remove tasks, and also update their contents or it's status to completed.",
-  imgsSrc: ['assets/works/Desktop/first-project/Screenshot-todo-list-orange.png'],
-  techs: ['HTML', 'SCSS', 'JavaScript', 'Webpack', 'Jest'],
+    'Take control of your finances easily! A mobile web application where you can manage your budget.',
+  description: `Take control of your finances easily! 
+  This mobile web app help users manage their budget by creating custom categories and tracking expenses with detailed activity lists 
+  so users can see exactly where their money goes and make informed spending decisions.`,
+  imgsSrc: [
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
+  ],
+  techs: ['Ruby on Rails', 'PostgreSQL', 'SCSS', 'RSpec/Capybara', 'Devise', 'Cancancan'],
   liveVersion: '/',
   source: '/',
   year: '2023',
 };
 
-const projects = [project1, project2];
+const project3 = {
+  name: 'Bookstore - Book Manager',
+  client: 'Microverse',
+  role: 'Full Stack Dev',
+  shortDescription:
+    'Built a functional book list application using React for a a user-friendly interface.',
+  description: `Built a functional bookstore website using React for a dynamic user experience. 
+  Users can browse a list of books, add new ones to their collection, and remove them as needed. 
+  The app leverages Redux for state management and SCSS for maintainable and customizable styling.`,
+  imgsSrc: [
+    'assets/works/Desktop/third-project/Screenshot 2024-03-20 203836.png',
+    'assets/works/Desktop/third-project/Screenshot 2024-03-20 203913.png',
+  ],
+  techs: ['React', 'JSX', 'SCSS', 'Redux'],
+  liveVersion: '/',
+  source: '/',
+  year: '2023',
+};
+
+const projects = [project1, project2, project3];
 
 projects.forEach((project, index) => {
   const cardWrapper = document.createElement('div');
@@ -268,6 +295,20 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
