@@ -158,41 +158,42 @@ const popupCard = `
     <img src='./assets/works/Counter.png' alt='' />
     <p id='popup-year'></p>
   </div>
-
-  <!-- glide carousel  -->
-  <div id="default-carousel" class="glide">
-    <div id="carousel-wrapper" class="glide__track" data-glide-el="track">
-      <ul id="carousel-list" class="glide__slides">
-        <li class="glide__slide">
-          <img id="img1" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="first image" />
-        </li>
-        <li class="glide__slide">
-          <img id="img2" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="second image" />
-        </li>
-        <li class="glide__slide">
-          <img id="img3" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="third image" />
-        </li>
-      </ul>
+  <div id="popup-wrapper">
+    <!-- glide carousel  -->
+    <div id="default-carousel" class="glide">
+      <div id="carousel-wrapper" class="glide__track" data-glide-el="track">
+        <ul id="carousel-list" class="glide__slides">
+          <li class="glide__slide">
+            <img id="img1" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="first image" />
+          </li>
+          <li class="glide__slide">
+            <img id="img2" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="second image" />
+          </li>
+          <li class="glide__slide">
+            <img id="img3" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="third image" />
+          </li>
+        </ul>
+      </div>
+      <div data-glide-el="controls">
+        <button data-glide-dir="<">prev</button>
+        <button data-glide-dir=">">next</button>
+      </div>
     </div>
-    <div data-glide-el="controls">
-      <button data-glide-dir="<">prev</button>
-      <button data-glide-dir=">">next</button>
-    </div>
-  </div>
-  <!-- glide carousel  -->
+    <!-- glide carousel  -->
 
-  <div id='popup-content'>
-    <p id='popup-description'></p>
-    <div id='interactions'>
-      <ul class='tags'>
-        <li class='tag'>HTML</li>
-        <li class='tag'>CSS</li>
-        <li class='tag'>JavaScript</li>
-      </ul>
-      <hr class='dividers' />
-      <div class='cta-btns'>
-        <button class='cta-btn'>See live <img src='./assets/header/Export.svg' alt='see live project button'/></button>
-        <button class='cta-btn'>See source <img src='./assets/header/Frame.svg' alt='see code button'/></button>
+    <div id='popup-content'>
+      <p id='popup-description'></p>
+      <div id='interactions'>
+        <ul class='tags'>
+          <li class='tag'>HTML</li>
+          <li class='tag'>CSS</li>
+          <li class='tag'>JavaScript</li>
+        </ul>
+        <hr class='dividers' />
+        <div class='cta-btns'>
+          <button class='cta-btn'>See live <img src='./assets/header/Export.svg' alt='see live project button'/></button>
+          <button class='cta-btn'>See source <img src='./assets/header/Frame.svg' alt='see code button'/></button>
+        </div>
       </div>
     </div>
   </div>
@@ -289,6 +290,7 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
 
 
 
