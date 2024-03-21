@@ -1,62 +1,74 @@
 // DYNAMICALLY POPULATED PROJECT  \\
 const workSection = document.getElementById('works-container');
 const project1 = {
+  name: 'BookCar Rental',
+  client: 'Personal Project',
+  role: 'Full Stack Developer',
+  shortDescription:
+  'A seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API.',
+  description:
+  'BookCar is a car booking application developed as part of the Microverse Full-Stack Web Development Program’s capstone project. it provides a seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API. This application demonstrates proficiency in full-stack web development, including React, Redux, Tailwind CSS, React-Router, and Rails API development. It showcases the ability to build a robust frontend that communicates effectively with a backend service, and manage application state using modern tools and libraries.',
+  imgsSrc: [
+    'assets/works/Desktop/second-project/Screenshot 2024-03-19 154852.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-03-19 154910.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-03-19 154932.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-03-19 154947.png',
+    'assets/works/Desktop/second-project/Screenshot 2024-03-19 155031.png',
+  ],
+  techs: ['React', 'Tailwind', 'PostgreSQL', 'Ruby on Rails', 'Redux'],
+  liveVersion: '/',
+  source: '/',
+  year: '2024',
+};
+
+const project2 = {
   name: 'TodoList - Task Manager',
   client: 'Microverse',
   role: 'Full Stack Dev',
+  shortDescription:
+    "A minimalist task manager that allows you to add and remove tasks, and also update their contents or it's status to completed.",
   description:
     "A minimalist task manager that allows you to add and remove tasks, and also update their contents or it's status to completed.",
-  imgSrc: 'assets/works/Desktop/Screenshot-todo-list-orange.png',
+  imgsSrc: ['assets/works/Desktop/first-project/Screenshot-todo-list-orange.png'],
   techs: ['HTML', 'SCSS', 'JavaScript', 'Webpack', 'Jest'],
   liveVersion: '/',
   source: '/',
-  year: '2022',
+  year: '2023',
 };
-const project2 = {
-  name: 'Tonic',
-  client: 'CANOPY',
-  role: 'Back End Dev',
-  description:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
-  imgSrc: 'assets/works/Portfolio1.png',
-  techs: ['HTML', 'CSS', 'JavaScript'],
-  liveVersion: '/',
-  source: '/',
-  year: '2015',
-};
+
 const projects = [project1, project2];
 
 projects.forEach((project, index) => {
   const cardWrapper = document.createElement('div');
   cardWrapper.className = 'card work';
   const cardWrapperHtml = `
-    <img
-      class='card-img'
-      src='${project.imgSrc}'
-      alt='project screenshot'
-    />
-    <div class='card-content'>
-      <h1 class='card-title'>${project.name}</h1>
-      <div class='details-container'>
-        <p class='client'>${project.client}</p>
-        <img src='assets/works/Counter.png' alt='' />
-        <p class='role'>${project.role}</p>
-        <img src='assets/works/Counter.png' alt='' />
-        <p class='year'>${project.year}</p>
-      </div>
-      <p class='work-description'>
-        ${project.description}
-      </p>
-      <ul id='tech${index}' class='tags'>
-      </ul>
-      <button id='see-project-btn' class='cta-btn'>See project</button>
-    </div>
+  <img
+  class='card-img'
+  src='${project.imgsSrc[0]}'
+  alt='project screenshot'
+  />
+  <div class='card-content'>
+  <h1 class='card-title'>${project.name}</h1>
+  <div class='details-container'>
+  <p class='client'>${project.client}</p>
+  <img src='assets/works/Counter.png' alt='' />
+  <p class='role'>${project.role}</p>
+  <img src='assets/works/Counter.png' alt='' />
+  <p class='year'>${project.year}</p>
+  </div>
+  <p class='work-description'>
+  ${project.shortDescription}
+  </p>
+  <ul id='tech${index}' class='tags'>
+  </ul>
+  <button id='see-project-btn' class='cta-btn'>See project</button>
+  </div>
   `;
-
+  
   cardWrapper.innerHTML = cardWrapperHtml;
   workSection.appendChild(cardWrapper);
   const tagsContainer = document.getElementById(`tech${index}`);
-
+  
   project.techs.forEach((tech) => {
     const li = document.createElement('li');
     li.className = 'tag';
@@ -152,15 +164,8 @@ const popupCard = `
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
         </div>
     </div>
-
-	<p class="mt-5">This carousel slider component is part of a larger, open-source library of Tailwind CSS components. Learn
-		more
-		by going to the official <a class="text-blue-600 hover:underline"
-			href="https://flowbite.com/docs/getting-started/introduction/" target="_blank">Flowbite Documentation</a>.
-	</p>
-
   <div id='popup-content'>
-    <p id='popup-description'> ${projects[0].description}</p>
+    <p id='popup-description'></p>
     <div id='interactions'>
       <ul class='tags'>
         <li class='tag'>HTML</li>
@@ -199,9 +204,10 @@ function openPopUp(index) {
     document.getElementById('client').textContent = projects[index].client;
     document.getElementById('role').textContent = projects[index].role;
     document.getElementById('year').textContent = projects[index].year;
-    document.getElementById('img1').src = projects[index].imgSrc;
-    document.getElementById('img2').src = projects[index].imgSrc;
-    document.getElementById('img3').src = projects[index].imgSrc;
+    document.getElementById('popup-description').textContent = projects[index].description;
+    document.getElementById('img1').src = projects[index].imgsSrc[0];
+    document.getElementById('img2').src = projects[index].imgsSrc[0];
+    document.getElementById('img3').src = projects[index].imgsSrc[0];
   }
 }
 
@@ -262,6 +268,15 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
+
+
+
+
+
+
+
 
 
 
