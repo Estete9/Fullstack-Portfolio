@@ -55,12 +55,21 @@ small.show {
     transform: translateX(10px);
   }
 }
+.language-logo {
+  height: 40px;
+}
 
 #default-carousel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+}
+
+#popup-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -659,17 +668,21 @@ li div p {
 
   #popup-content {
     display: flex;
-    flex-direction: row;
+   margin: 0;
+    align-items: center;
     gap: 24px;
     padding: 3% 2%;
-    /* overflow: hidden; */
-    /* height: 100%; */
+    justify-content: center;
   }
 
   #carousel-list {
-    height: 85%
+    height: 100%
   }
 
+    .slide-img {
+      height: 100%;
+      max-height: unset;
+    }
   #interactions {
     width: 31%;
     margin-top: 0;
@@ -690,8 +703,8 @@ li div p {
   }
 
   #carousel-wrapper {
-    height: 20rem;
-    width: 100%;
+    height: 30rem;
+    width: 30rem;
   }
   .details-container + img {
     align-self: center;
@@ -706,6 +719,15 @@ li div p {
 
   #interactions .dividers {
     margin: 20px 0;
+  }
+
+  .cta-btns {
+    width: 22rem;
+  }
+
+  #popup-wrapper {
+    flex-direction: row;
+    height: 100%;
   }
 
   #headline .primary-text {
