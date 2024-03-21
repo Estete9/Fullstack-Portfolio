@@ -256,11 +256,6 @@ li div p {
   line-height: 24px;
 }
 
-.card-content > p {
-  overflow: hidden;
-  height: 33%;
-}
-
 .primary-text + p + p {
   color: var(--primary-b-300, #7f8cff);
   font-size: 16px;
