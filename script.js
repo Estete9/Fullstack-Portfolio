@@ -39,7 +39,6 @@ const project2 = {
   imgsSrc: [
     'assets/works/Desktop/second-project/Screenshot 2024-02-10 085240.png',
     'assets/works/Desktop/second-project/Screenshot 2024-02-10 085305.png',
-    'assets/works/Desktop/second-project/Screenshot 2024-02-10 085319.png',
     'assets/works/Desktop/second-project/Screenshot 2024-02-10 085350.png',
     'assets/works/Desktop/second-project/Screenshot 2024-02-10 085405.png',
     'assets/works/Desktop/second-project/Screenshot 2024-02-10 085428.png',
