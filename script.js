@@ -48,8 +48,8 @@ const project2 = {
 
 const project3 = {
   name: 'Bookstore - Book Manager',
-  client: 'Microverse',
-  role: 'Full Stack Dev',
+  client: 'Personal Project',
+  role: 'Full Stack Developer',
   shortDescription:
     'Built a functional book list application using React for a a user-friendly interface.',
   description: `Built a functional bookstore website using React for a dynamic user experience. 
@@ -285,6 +285,7 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
 
 
 
