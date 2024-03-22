@@ -184,11 +184,6 @@ const popupCard = `
     <div id='popup-content'>
       <p id='popup-description'></p>
       <div id='interactions'>
-        <ul class='tags'>
-          <li class='tag'>HTML</li>
-          <li class='tag'>CSS</li>
-          <li class='tag'>JavaScript</li>
-        </ul>
         <hr class='dividers' />
         <div class='cta-btns'>
           <button class='cta-btn'>See live <img src='./assets/header/Export.svg' alt='see live project button'/></button>

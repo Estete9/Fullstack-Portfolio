@@ -55,8 +55,9 @@ small.show {
     transform: translateX(10px);
   }
 }
-.language-logo {
-  height: 40px;
+.knowledge-logo {
+  height: 50px;
+  /* max-width: 55px; */
 }
 
 #default-carousel {
@@ -302,12 +303,12 @@ li div p {
   gap: 88px;
 }
 
-.skill > div {
+.knowledge > div {
   display: flex;
   justify-content: flex-start;
 }
 
-.skill div:first-of-type {
+.knowledge div:first-of-type {
   display: flex;
   padding: 16px 26px 16px 12px;
   align-items: center;
@@ -533,11 +534,11 @@ li div p {
   align-items: flex-start;
 }
 
-#skills-list {
+#knowledge-list {
   width: 100%;
 }
 
-.language-container {
+.language-container, .framework-container, .skill-container {
   display: flex;
   width: 100%;
   padding: 9px 12px 9.716px 12px;
@@ -548,7 +549,7 @@ li div p {
   background: var(--neutrals-n-10, #f7f7f9);
 }
 
-#languages-list {
+#languages-list, #frameworks-list, #skills-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -756,7 +757,7 @@ li div p {
     }
   }
 
-  .language-container p {
+  .language-container p, .framework-container p, .skill-container p {
     font-size: 15px;
     font-weight: 500;
     line-height: 20px;
@@ -935,29 +936,25 @@ li div p {
     margin-left: 0;
   }
 
-  #languages-list {
+  #languages-list, #frameworks-list, #skills-list {
     flex-direction: row;
     padding: 12px;
   }
 
-  .language {
+  .language, .framework, .skill {
     min-width: 16%;
   }
 
-  .language div {
+  .language div, .framework div, .skill div {
     flex-direction: column;
     text-align: center;
   }
 
-  .skill div:first-of-type {
+  .knowledge div:first-of-type {
     padding: 12px 12px 20px 12px;
   }
 
-  .language-container img:first-child {
-    align-self: self-start;
-  }
-
-  #skills-list li div {
+  #knowledge-list li div {
     padding: 16px 26px 16px 24px;
   }
 
@@ -967,9 +964,5 @@ li div p {
 
   #contact-form-container > * {
     width: 40%;
-  }
-
-  #contact-form button {
-    /* margin-left: auto; */
   }
 }
