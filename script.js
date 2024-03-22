@@ -160,23 +160,25 @@ const popupCard = `
   </div>
   <div id="popup-wrapper">
     <!-- glide carousel  -->
-    <div id="default-carousel" class="glide">
-      <div id="carousel-wrapper" class="glide__track" data-glide-el="track">
-        <ul id="carousel-list" class="glide__slides">
-          <li class="glide__slide">
-            <img id="img1" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="first image" />
-          </li>
-          <li class="glide__slide">
-            <img id="img2" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="second image" />
-          </li>
-          <li class="glide__slide">
-            <img id="img3" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="third image" />
-          </li>
-        </ul>
-      </div>
-      <div data-glide-el="controls">
-        <button data-glide-dir="<">prev</button>
-        <button data-glide-dir=">">next</button>
+    <div id="carousel-wrapper-content">
+      <div id="default-carousel" class="glide">
+        <div id="carousel-wrapper" class="glide__track" data-glide-el="track">
+          <ul id="carousel-list" class="glide__slides">
+            <li class="glide__slide">
+              <img id="img1" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="first image" />
+            </li>
+            <li class="glide__slide">
+              <img id="img2" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="second image" />
+            </li>
+            <li class="glide__slide">
+              <img id="img3" class="slide-img block h-full object-cover rounded-lg shadow-md" src="/" alt="third image" />
+            </li>
+          </ul>
+        </div>
+        <div class="carousel-navigation" data-glide-el="controls">
+          <button class="carousel-navigation-btn" data-glide-dir="<">prev</button>
+          <button class="carousel-navigation-btn" data-glide-dir=">">next</button>
+        </div>
       </div>
     </div>
     <!-- glide carousel  -->
@@ -285,6 +287,8 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
 
 
 
