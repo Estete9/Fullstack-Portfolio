@@ -70,6 +70,7 @@ small.show {
   display: flex;
   justify-content: center;
   gap: 10rem;
+  margin-top: 1rem;
 }
 
 .carousel-navigation-btn {
@@ -230,11 +231,8 @@ header {
   min-width: 400px;
 }
 
-#carousel-wrapper-content {
-  display: flex;
-  padding: 25px;
-  border-radius: 25px;
-  background-color: var(--primary-b-400, #6070ff);
+#carousel-wrapper {
+  box-shadow: -10px 8px 10px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes slidein {
@@ -699,11 +697,11 @@ li div p {
 
   .carousel-navigation-btn {
     display: block;
-    background-color: white;
+    background-color: var(--primary-b-400, #6070ff);
     border-radius: 8px;
-    border: 0;
     padding: 4px 12px;
-    color: var(--primary-b-400, #6070ff);
+    border: 0;
+    color: white;
     cursor: pointer;
     font-size: 1rem;
     width: 5rem;
@@ -741,6 +739,7 @@ li div p {
   #carousel-wrapper {
     width: 30rem;
   }
+
   .details-container + img {
     align-self: center;
     max-width: 530px;
