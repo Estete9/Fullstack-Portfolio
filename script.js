@@ -101,11 +101,11 @@ projects.forEach((project, index) => {
   <button id='see-project-btn' class='cta-btn'>See project</button>
   </div>
   `;
-  
+
   cardWrapper.innerHTML = cardWrapperHtml;
   workSection.appendChild(cardWrapper);
   const tagsContainer = document.getElementById(`tech${index}`);
-  
+
   project.techs.forEach((tech) => {
     const li = document.createElement('li');
     li.className = 'tag';
@@ -139,9 +139,9 @@ menuElems.forEach((element) => {
   element.onclick = function () {
     menu.classList.remove('mobile-menu');
     // hides menu if only if it's in a mobile screen
-    if(window.innerWidth <= 768){
+    if (window.innerWidth <= 768) {
       menu.style.display = 'none';
-    } 
+    }
     menuBtn.setAttribute('src', 'assets/header/menu.svg');
     showMenu = false;
   };
@@ -215,8 +215,8 @@ closeBtn.onclick = closePopup;
 
 function openPopUp(index) {
   if (overlay.className !== 'open') {
-    const sourceCodeBtn= document.getElementById('source-code');
-    const liveDemoBtn= document.getElementById('live-demo');
+    const sourceCodeBtn = document.getElementById('source-code');
+    const liveDemoBtn = document.getElementById('live-demo');
 
     overlay.className = 'open';
     blur.className = 'open';
@@ -225,20 +225,20 @@ function openPopUp(index) {
     document.getElementById('popup-client').textContent = projects[index].client;
     document.getElementById('popup-role').textContent = projects[index].role;
     document.getElementById('popup-year').textContent = projects[index].year;
-    document.getElementById('popup-description').textContent = projects[index].description;    
+    document.getElementById('popup-description').textContent = projects[index].description;
     document.getElementById('img1').src = projects[index].imgsSrc[0];
     document.getElementById('img2').src = projects[index].imgsSrc[1];
     document.getElementById('img3').src = projects[index].imgsSrc[2];
-    document.getElementById('carousel-list').style.width ='100%';
+    document.getElementById('carousel-list').style.width = '100%';
 
-    document.querySelectorAll('.glide__slide').forEach(slide => {
-      slide.style.width = '100%'
+    document.querySelectorAll('.glide__slide').forEach((slide) => {
+      slide.style.width = '100%';
     });
 
     sourceCodeBtn.addEventListener('click', (event) => {
       event.preventDefault;
       sourceCodeBtn.href = projects[index].sourceUrl;
-    })
+    });
 
     if (projects[index].demoUrl == null) {
       console.log(projects[index].demoUrl);
@@ -258,6 +258,24 @@ for (let i = 0; i < projectBtns.length; i += 1) {
   btn.addEventListener('click', () => openPopUp(i));
 }
 
+// KNOWLEDGE TOGGLE LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+const knowledgeHeaders = document.querySelectorAll('.knowledge-header');
+const knowledgeListItems = Array.from(document.querySelectorAll('.knowledge-list-item'));
+
+knowledgeHeaders.forEach((header) => {
+  header.addEventListener('click', () => {
+    const currentIndex = Array.from(knowledgeHeaders).indexOf(header);
+    const arrowImage = header.querySelector('.knowledge-arrow');
+
+    knowledgeListItems[currentIndex].classList.toggle('show');
+
+    if(arrowImage.src.includes('Right')) {
+      arrowImage.src = 'assets/about me/Icon - Chevron - Down - Larger.svg';
+    } else {
+      arrowImage.src = 'assets/about me/Icon - Chevron - Right - Larger.svg';
+    }
+  });
+});
 // FORM VALIDATION LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const form = document.getElementById('contact-form');
@@ -310,82 +328,6 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

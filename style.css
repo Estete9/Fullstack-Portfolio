@@ -423,6 +423,7 @@ li div p {
   line-height: 24px;
   letter-spacing: 0.51px;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 .cta-btns .cta-btn {
@@ -566,10 +567,27 @@ li div p {
   background: var(--neutrals-n-10, #f7f7f9);
 }
 
-#languages-list, #frameworks-list, #skills-list {
-  display: flex;
+.knowledge-list-item {
+  display: none;
   flex-direction: column;
   gap: 12px;
+}
+
+.knowledge-list-item.show {
+  display: flex;
+  animation: expand-list 0.5s ease-in-out;
+}
+
+@keyframes expand-list {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 100vh;
+    opacity: 1;
+  }
 }
 
 #contact-form-bkg {
