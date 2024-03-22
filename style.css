@@ -676,13 +676,9 @@ li div p {
     justify-content: center;
   }
 
-  #carousel-list {
-    height: 100%
-  }
-
     .slide-img {
       height: 100%;
-      max-height: unset;
+      max-height: 30rem;
     }
   #interactions {
     width: 31%;
@@ -704,7 +700,7 @@ li div p {
   }
 
   #carousel-wrapper {
-    height: 30rem;
+    /* height: 30rem; */
     width: 30rem;
   }
   .details-container + img {
