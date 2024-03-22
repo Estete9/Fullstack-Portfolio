@@ -403,6 +403,7 @@ li div p {
   gap: 12px;
   padding: 4px 9px;
   width: 100%;
+  justify-content: center;
 }
 
 .cta-btn {
@@ -410,6 +411,7 @@ li div p {
   background-color: transparent;
   padding: 12px;
   width: fit-content;
+  max-width: 161px;
   border-radius: 8px;
   align-items: center;
   border: 1px solid var(--primary-b-400, #6070ff);

@@ -4,6 +4,8 @@ const project1 = {
   name: 'BookCar Rental',
   client: 'Personal Project',
   role: 'Full Stack Developer',
+  sourceUrl: 'https://github.com/fmanimashaun/book-car',
+  demoUrl: 'https://fmanimashaun.github.io/book-car/',
   shortDescription:
     'A seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API.',
   description:
@@ -26,6 +28,8 @@ const project2 = {
   name: "Where's the Money - Budget Manager",
   client: 'Personal Project',
   role: 'Full Stack Developer',
+  sourceUrl: 'https://github.com/Estete9/where-s-the-money',
+  demoUrl: 'https://wheres-the-money.onrender.com/',
   shortDescription:
     'Take control of your finances easily! A mobile web application where you can manage your budget.',
   description: `Take control of your finances easily! 
@@ -50,6 +54,8 @@ const project3 = {
   name: 'Bookstore - Book Manager',
   client: 'Personal Project',
   role: 'Full Stack Developer',
+  sourceUrl: 'https://github.com/Estete9/bookstore-react',
+  demoUrl: null,
   shortDescription:
     'Built a functional book list application using React for a a user-friendly interface.',
   description: `Built a functional bookstore website using React for a dynamic user experience. 
@@ -186,8 +192,8 @@ const popupCard = `
       <div id='interactions'>
         <hr class='dividers' />
         <div class='cta-btns'>
-          <button class='cta-btn'>See live <img src='./assets/header/Export.svg' alt='see live project button'/></button>
-          <button class='cta-btn'>See source <img src='./assets/header/Frame.svg' alt='see code button'/></button>
+          <a id="live-demo" class='cta-btn' href="#">See live <img src='./assets/header/Export.svg' alt='see live project button'/></a>
+          <a id="source-code" class='cta-btn' href="#">See source <img src='./assets/header/Frame.svg' alt='see code button'/></a>
         </div>
       </div>
     </div>
@@ -209,6 +215,9 @@ closeBtn.onclick = closePopup;
 
 function openPopUp(index) {
   if (overlay.className !== 'open') {
+    const sourceCodeBtn= document.getElementById('source-code');
+    const liveDemoBtn= document.getElementById('live-demo');
+
     overlay.className = 'open';
     blur.className = 'open';
     closeBtn.className = 'open';
@@ -216,7 +225,7 @@ function openPopUp(index) {
     document.getElementById('popup-client').textContent = projects[index].client;
     document.getElementById('popup-role').textContent = projects[index].role;
     document.getElementById('popup-year').textContent = projects[index].year;
-    document.getElementById('popup-description').textContent = projects[index].description;
+    document.getElementById('popup-description').textContent = projects[index].description;    
     document.getElementById('img1').src = projects[index].imgsSrc[0];
     document.getElementById('img2').src = projects[index].imgsSrc[1];
     document.getElementById('img3').src = projects[index].imgsSrc[2];
@@ -225,6 +234,22 @@ function openPopUp(index) {
     document.querySelectorAll('.glide__slide').forEach(slide => {
       slide.style.width = '100%'
     });
+
+    sourceCodeBtn.addEventListener('click', (event) => {
+      event.preventDefault;
+      sourceCodeBtn.href = projects[index].sourceUrl;
+    })
+
+    if (projects[index].demoUrl == null) {
+      console.log(projects[index].demoUrl);
+      liveDemoBtn.style.display = 'none';
+    } else {
+      liveDemoBtn.style.display = 'flex';
+      liveDemoBtn.addEventListener('click', (event) => {
+        event.preventDefault;
+        liveDemoBtn.href = projects[index].demoUrl;
+      });
+    }
   }
 }
 
@@ -285,6 +310,24 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
