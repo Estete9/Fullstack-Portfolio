@@ -92,6 +92,29 @@ header {
   justify-content: space-between;
   gap: 199px;
   flex-shrink: 0;
+  /* sticky */
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  /* z-index: 10; */
+}
+
+header.scrolled {
+  animation: colorChange 0.3s ease-in-out forwards;
+}
+
+@keyframes colorChange {
+  from {
+    background-color: #fff;
+  }
+
+  /* Start from initial color */
+  to {
+    background-color: #6070ffc9;
+  }
+
+  /* Change to scrolled color */
 }
 
 .cta-btn img {
@@ -733,6 +756,10 @@ li div p {
     height: 2.5rem;
   }
 
+  #hero-p {
+    max-width: 55%;
+  }
+
   .slide-img {
     height: 100%;
     max-height: 30rem;
@@ -757,7 +784,7 @@ li div p {
   #headline {
     background-image: url(assets/headline/Desktop/Header\ bg@2x.png);
     background-size: auto 100%;
-    align-items: center;
+    align-items: start;
     justify-content: center;
   }
 

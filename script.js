@@ -29,7 +29,7 @@ const project2 = {
   client: 'Personal Project',
   role: 'Full Stack Developer',
   sourceUrl: 'https://github.com/Estete9/where-s-the-money',
-  demoUrl: 'https://wheres-the-money.onrender.com/',
+  demoUrl: 'https://where-s-the-money.onrender.com',
   shortDescription:
     'Take control of your finances easily! A mobile web application where you can manage your budget.',
   description: `Take control of your finances easily! 
@@ -113,7 +113,20 @@ projects.forEach((project, index) => {
   });
 });
 
-// MOBILE MENU LOGIC
+// HEADER SCROLL LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('header')
+  const scrollY = window.scrollY
+  
+  if(scrollY > 50) {
+    header.classList.add('scrolled')
+  } else {
+    header.classList.remove('scrolled');
+  }
+})
+
+// MOBILE MENU LOGIC   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const menuBtn = document.querySelector('#menu-btn img');
 const menu = document.querySelector('#menu');
 const menuElems = document.querySelectorAll('#menu a');
@@ -191,8 +204,8 @@ const popupCard = `
       <div id='interactions'>
         <hr class='dividers' />
         <div class='cta-btns'>
-          <a id="live-demo" class='cta-btn' href="#">See live <img src='./assets/header/Export.svg' alt='see live project button'/></a>
-          <a id="source-code" class='cta-btn' href="#">See source <img src='./assets/header/Frame.svg' alt='see code button'/></a>
+          <a id="live-demo" class='cta-btn' href="#" target="_blank">See live <img src='./assets/header/Export.svg' alt='see live project button'/></a>
+          <a id="source-code" class='cta-btn' href="#" target="_blank">See source <img src='./assets/header/Frame.svg' alt='see code button'/></a>
         </div>
       </div>
     </div>
@@ -327,6 +340,10 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
+
+
 
 
 
