@@ -7,7 +7,7 @@ const project1 = {
   shortDescription:
     'A seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API.',
   description:
-    'BookCar is a car booking application developed as part of the Microverse Full-Stack Web Development Program’s capstone project. it provides a seamless and user-friendly platform for users to view and reserve cars for rides. The application is built with React and communicates with a Rails API backend named BookCar-API. This application demonstrates proficiency in full-stack web development, including React, Redux, Tailwind CSS, React-Router, and Rails API development. It showcases the ability to build a robust frontend that communicates effectively with a backend service, and manage application state using modern tools and libraries.',
+    'BookCar is a car booking app developed as part of the Microverse Full-Stack Web Development Program. It offers seamless car browsing and reservation. Built with React, it communicates with a Rails API backend called BookCar-API. This project showcases expertise in full-stack web development, including React, Redux, Tailwind CSS, React-Router, and Rails API.',
   featuredImg: 'assets/works/Desktop/first-project/Screenshot 2024-03-19 154852.png',
   imgsSrc: [
     'assets/works/Desktop/first-project/Screenshot 2024-03-19 154852.png',
@@ -285,6 +285,8 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
 
 
 

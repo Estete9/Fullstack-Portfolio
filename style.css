@@ -57,7 +57,6 @@ small.show {
 }
 .knowledge-logo {
   height: 50px;
-  /* max-width: 55px; */
 }
 
 #default-carousel {
@@ -71,6 +70,7 @@ small.show {
 #popup-wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 header {
@@ -107,6 +107,8 @@ header {
 }
 
 #popup-content {
+  height: 100%;
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
   padding: 4% 3%;
@@ -364,7 +366,6 @@ li div p {
 
 #popup-description {
   overflow: hidden;
-  max-height: 40%;
 }
 
 #blur {
@@ -700,7 +701,6 @@ li div p {
   }
 
   #carousel-wrapper {
-    /* height: 30rem; */
     width: 30rem;
   }
   .details-container + img {
@@ -854,7 +854,7 @@ li div p {
     margin-right: 22px;
     padding: 0 24px;
     flex: 1;
-    width: 60%;
+    width: 50%;
     max-height: 80%;
   }
 
