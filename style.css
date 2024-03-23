@@ -245,11 +245,44 @@ header.scrolled a {
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
-  background-image: url(assets/headline/header-shapes\ mobile@2x.svg);
+  /* background-image: url(assets/headline/header-shapes\ mobile@2x.svg); */
   background-size: 100%;
   overflow: hidden;
 }
 
+#moving-image-container {
+  position: fixed;
+    /* Keep images in place as you scroll */
+    top: 0;
+    /* Position at the top of the viewport */
+    left: 0;
+    /* Position at the left of the viewport */
+    width: 100%;
+    /* Span the entire width */
+    height: 100%;
+    /* Span the entire height */
+    overflow: hidden;
+    /* Clip overflowing parts of images */
+    z-index: -1;
+    /* Place behind everything else (adjust if needed) */
+}
+
+.moving-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.moving-image-1 {
+/* animation: movingImage 10s linear infinite; */
+}
+
+@keyframes movingImage {
+  0% {transform: translateX(0)}
+  100% {transform: translateX(100%)}
+}
 .primary-text {
   display: flex;
   flex-direction: column;
@@ -640,7 +673,7 @@ li div p {
   flex-direction: column;
   background-color: var(--primary-b-400, #6070ff);
   justify-content: center;
-  background-image: url(assets/contact/contact\ form\ shapes-mobile.svg);
+  /* background-image: url(assets/contact/contact\ form\ shapes-mobile.svg); */
   background-position: right;
   background-repeat: no-repeat;
   padding-bottom: 45px;
@@ -791,7 +824,7 @@ li div p {
   }
 
   #headline {
-    background-image: url(assets/headline/Desktop/Header\ bg@2x.png);
+    /* background-image: url(assets/headline/Desktop/Header\ bg@2x.png); */
     background-size: auto 100%;
     align-items: start;
     justify-content: center;

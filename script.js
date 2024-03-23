@@ -19,8 +19,6 @@ const project1 = {
     'assets/works/Desktop/first-project/Screenshot 2024-03-19 155031.png',
   ],
   techs: ['React', 'Tailwind', 'PostgreSQL', 'Ruby on Rails', 'Redux', 'RSpec/Capybara', 'RSwag'],
-  liveVersion: '/',
-  source: '/',
   year: '2024',
 };
 
@@ -44,8 +42,6 @@ const project2 = {
     'assets/works/Desktop/second-project/Screenshot 2024-02-10 085428.png',
   ],
   techs: ['Ruby on Rails', 'PostgreSQL', 'SCSS', 'RSpec/Capybara', 'Devise', 'Cancancan'],
-  liveVersion: '/',
-  source: '/',
   year: '2023',
 };
 
@@ -67,12 +63,31 @@ const project3 = {
     'assets/works/Desktop/third-project/Screenshot 2024-03-21 155139.png',
   ],
   techs: ['React', 'JSX', 'SCSS', 'Redux'],
-  liveVersion: '/',
-  source: '/',
+  year: '2023',
+};
+const project4 = {
+  name: 'Recipes App - Pantry Helper',
+  client: 'Personal Project',
+  role: 'Full Stack Developer',
+  sourceUrl: 'https://github.com/Estete9/recipes-app',
+  demoUrl: null,
+  shortDescription:
+    'Keep track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on your pantry.',
+  description: `Keep track of all your recipes, ingredients, and inventory. 
+  It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on your pantry. 
+  Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.`,
+  featuredImg: 'assets/works/Desktop/fourth-project/Screenshot 2024-03-22 222453.png',
+  imgsSrc: [
+    'assets/works/Desktop/fourth-project/Screenshot 2024-03-22 222453.png',
+    'assets/works/Desktop/fourth-project/Screenshot 2024-03-22 222327.png',
+    'assets/works/Desktop/fourth-project/Screenshot 2024-03-22 222436.png',
+    'assets/works/Desktop/fourth-project/Screenshot 2024-03-22 222504.png',
+  ],
+  techs: ['Ruby on Rails', 'PostgreSQL', 'SCSS', 'RSpec/Capybara', 'Devise', 'Cancancan', 'Bootstrap'],
   year: '2023',
 };
 
-const projects = [project1, project2, project3];
+const projects = [project1, project2, project3, project4];
 
 projects.forEach((project, index) => {
   const cardWrapper = document.createElement('div');
@@ -117,14 +132,23 @@ projects.forEach((project, index) => {
 
 const logo = document.getElementById('logo')
 const header = document.querySelector('header')
+// const imageContainer = document.querySelector('#moving-image-container');
+const headline1 = document.getElementById('moving-image-1');
+const headline2 = document.getElementById('moving-image-2');
 
 window.addEventListener('scroll', function() {
-  const scrollY = window.scrollY
-  const scrollTrigger = 350; // Initial trigger point
+  const scrollY = window.scrollY;
+  const scrollTrigger = 50; // Initial trigger point
   const minScrollAmount = 20;
 
-  if(scrollY > scrollTrigger && scrollY > minScrollAmount) {
-    header.classList.add('scrolled')
+  const imageMovement = scrollY / scrollTrigger; // Calculate movement based on scroll
+
+  // imageContainer.style.transform = `translateX(${imageMovement * 2}%)`; // Apply translation based on scroll
+  headline1.style.transform = `translateX(${imageMovement * 2}%)`; // Apply translation based on scroll
+  headline2.style.transform = `translateX(-${imageMovement * 2}%)`; // Apply translation based on scroll
+
+  if (scrollY > scrollTrigger && scrollY > minScrollAmount) {
+    header.classList.add('scrolled');
     // header.classList.add('shrunk')
     // logo.classList.add('logoShrink');
   } else {
@@ -229,6 +253,7 @@ function closePopup() {
   overlay.className = '';
   blur.className = '';
   closeBtn.className = '';
+  header.style.display = 'flex';
 }
 
 closeBtn.onclick = closePopup;
@@ -238,6 +263,7 @@ function openPopUp(index) {
     const sourceCodeBtn = document.getElementById('source-code');
     const liveDemoBtn = document.getElementById('live-demo');
 
+    header.style.display = 'none';
     overlay.className = 'open';
     blur.className = 'open';
     closeBtn.className = 'open';
@@ -348,6 +374,16 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
+
+
+
+
+
+
+
+
+
 
 
 
