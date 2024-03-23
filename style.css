@@ -45,7 +45,6 @@ small.show {
   100% {
     transform: translateX(0);
   }
-
   25%,
   75% {
     transform: translateX(-10px);
@@ -56,7 +55,7 @@ small.show {
   }
 }
 .knowledge-logo {
-  height: 50px;
+  height: 100%;
 }
 
 #default-carousel {
@@ -96,25 +95,55 @@ header {
   position: sticky;
   top: 0;
   background-color: #fff;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-  /* z-index: 10; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
+/* header.shrunk {
+  animation: headerShrink 0.3s ease-in-out forwards;
+} */
 header.scrolled {
-  animation: colorChange 0.3s ease-in-out forwards;
+  animation: headerColorChange 0.3s ease-in-out forwards, headerShrink 0.3s ease-in-out forwards;
 }
 
-@keyframes colorChange {
+header.scrolled a {
+  animation: headerTextColorChange 0.3s ease-in-out forwards;
+}
+
+@keyframes headerColorChange {
   from {
     background-color: #fff;
   }
-
-  /* Start from initial color */
   to {
     background-color: #6070ffc9;
   }
+}
 
-  /* Change to scrolled color */
+@keyframes headerTextColorChange {
+  from {
+    color: #6070ffc9;
+  }
+  to {
+    color: #fff;
+  }
+}
+
+@keyframes headerShrink {
+  from {
+    height: 48px;
+  }
+  to {
+    height: 32px;
+  }
+}
+
+@keyframes logoShrink {
+  from {
+    padding: 10px 12px;
+  }
+  to {
+    padding: 5px 5px;
+  }
 }
 
 .cta-btn img {
@@ -202,9 +231,10 @@ header.scrolled {
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
-  /* animation-name: spin;
-  animation-duration: 1s; */
   height: inherit;
+}
+#logo.logoShrink {
+  animation: logoShrink 0.3s ease-in-out forwards;
 }
 
 #logo img {

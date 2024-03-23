@@ -117,12 +117,17 @@ projects.forEach((project, index) => {
 
 window.addEventListener('scroll', function() {
   const header = document.querySelector('header')
+  const logo = document.getElementById('logo')
   const scrollY = window.scrollY
   
   if(scrollY > 50) {
     header.classList.add('scrolled')
+    header.classList.add('shrunk')
+    logo.classList.add('logoShrink');
   } else {
     header.classList.remove('scrolled');
+    header.classList.remove('shrunk');
+    logo.classList.remove('logoShrink');
   }
 })
 
@@ -340,6 +345,7 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
 
 
 
