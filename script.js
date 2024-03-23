@@ -132,29 +132,23 @@ projects.forEach((project, index) => {
 
 const logo = document.getElementById('logo')
 const header = document.querySelector('header')
-// const imageContainer = document.querySelector('#moving-image-container');
 const headline1 = document.getElementById('moving-image-1');
 const headline2 = document.getElementById('moving-image-2');
 
 window.addEventListener('scroll', function() {
   const scrollY = window.scrollY;
-  const scrollTrigger = 50; // Initial trigger point
+  const scrollTrigger = 50;
   const minScrollAmount = 20;
 
-  const imageMovement = scrollY / scrollTrigger; // Calculate movement based on scroll
+  const imageMovement = scrollY / scrollTrigger; 
 
-  // imageContainer.style.transform = `translateX(${imageMovement * 2}%)`; // Apply translation based on scroll
-  headline1.style.transform = `translateX(${imageMovement * 2}%)`; // Apply translation based on scroll
-  headline2.style.transform = `translateX(-${imageMovement * 2}%)`; // Apply translation based on scroll
+  headline1.style.transform = `translateX(${imageMovement * 1.5}%)`;
+  headline2.style.transform = `translateX(-${imageMovement}%)`;
 
   if (scrollY > scrollTrigger && scrollY > minScrollAmount) {
     header.classList.add('scrolled');
-    // header.classList.add('shrunk')
-    // logo.classList.add('logoShrink');
   } else {
     header.classList.remove('scrolled');
-    // header.classList.remove('shrunk');
-    // logo.classList.remove('logoShrink');
   }
 })
 
