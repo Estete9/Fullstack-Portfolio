@@ -115,19 +115,22 @@ projects.forEach((project, index) => {
 
 // HEADER SCROLL LOGIC \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+const logo = document.getElementById('logo')
+const header = document.querySelector('header')
+
 window.addEventListener('scroll', function() {
-  const header = document.querySelector('header')
-  const logo = document.getElementById('logo')
   const scrollY = window.scrollY
-  
-  if(scrollY > 50) {
+  const scrollTrigger = 350; // Initial trigger point
+  const minScrollAmount = 20;
+
+  if(scrollY > scrollTrigger && scrollY > minScrollAmount) {
     header.classList.add('scrolled')
-    header.classList.add('shrunk')
-    logo.classList.add('logoShrink');
+    // header.classList.add('shrunk')
+    // logo.classList.add('logoShrink');
   } else {
     header.classList.remove('scrolled');
-    header.classList.remove('shrunk');
-    logo.classList.remove('logoShrink');
+    // header.classList.remove('shrunk');
+    // logo.classList.remove('logoShrink');
   }
 })
 
@@ -345,6 +348,7 @@ function repopulateForm() {
 }
 
 window.onload = repopulateForm();
+
 
 
 

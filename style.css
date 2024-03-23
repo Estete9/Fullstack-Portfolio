@@ -103,7 +103,7 @@ header {
   animation: headerShrink 0.3s ease-in-out forwards;
 } */
 header.scrolled {
-  animation: headerColorChange 0.3s ease-in-out forwards, headerShrink 0.3s ease-in-out forwards;
+  animation: headerColorChange 0.3s ease-in-out forwards;
 }
 
 header.scrolled a {
@@ -125,24 +125,6 @@ header.scrolled a {
   }
   to {
     color: #fff;
-  }
-}
-
-@keyframes headerShrink {
-  from {
-    height: 48px;
-  }
-  to {
-    height: 32px;
-  }
-}
-
-@keyframes logoShrink {
-  from {
-    padding: 10px 12px;
-  }
-  to {
-    padding: 5px 5px;
   }
 }
 
@@ -232,9 +214,6 @@ header.scrolled a {
   font-weight: 700;
   line-height: 20px;
   height: inherit;
-}
-#logo.logoShrink {
-  animation: logoShrink 0.3s ease-in-out forwards;
 }
 
 #logo img {
